@@ -10,20 +10,18 @@ export const constantRouterMap = [
     meta: {
       title: '首页',
       keepAlive: false
-    },
-    children: [
-      {
-        path: '/home',
-        name: 'Home',
-        component: () => import('@/views/home/index'),
-        meta: { title: '首页', keepAlive: false }
-      },
-      {
-        path: '/about',
-        name: 'About',
-        component: () => import('@/views/home/about'),
-        meta: { title: '关于我', keepAlive: false }
-      }
-    ]
+    }
+  },
+  {
+    path: '/complaints',
+    name: 'complaints',
+    component: () => import('@/views/home/complaints'),
+    meta: { title: '消息反馈', keepAlive: false }
+  },
+  {
+    path: '/authen',
+    name: 'authen',
+    component: () => import('@/views/home/authen'),
+    meta: { title: '防伪查询', keepAlive: false }
   }
 ]

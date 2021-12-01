@@ -7,7 +7,6 @@
         </keep-alive>
         <router-view v-else></router-view>
       </div>
-      <TabBar :data="tabbars" @change="handleChange" />
     </div>
   </div>
 </template>
