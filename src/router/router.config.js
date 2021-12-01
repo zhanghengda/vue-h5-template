@@ -13,6 +13,12 @@ export const constantRouterMap = [
     }
   },
   {
+    path: '/home',
+    name: 'home',
+    component: () => import('@/views/home/index'),
+    meta: { title: '首页', keepAlive: false }
+  },
+  {
     path: '/complaints',
     name: 'complaints',
     component: () => import('@/views/home/complaints'),
