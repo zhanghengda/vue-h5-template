@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <van-tabbar fixed route v-model="active" @change="handleChange">
-      <van-tabbar-item v-for="(item, index) in data" :to="item.to" :icon="item.icon" :key="index">
-        {{ item.title }}
-      </van-tabbar-item>
-    </van-tabbar>
-  </div>
+  <nav class="bar bar-tab">
+    <p class="buttons-row endpage">
+      <a
+        href="complaints.html?serial_num=1102347000741150643104039&amp;product_pk=790873522749571072"
+        class="button endpage-a external indexAOne"
+        id="complaints"
+        ><span class="endpage-span">消费反馈</span></a
+      >
+      <a
+        class="button endpage-a external indexATwo"
+        id="infosearch"
+        href="authen.html?serial_num=1102347000741150643104039"
+        ><span class="endpage-span-search">防伪查询</span></a
+      >
+    </p>
+  </nav>
 </template>
 <script>
 export default {

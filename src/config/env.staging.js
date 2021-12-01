@@ -1,7 +1,7 @@
 module.exports = {
   title: 'vue-h5-template',
-  baseUrl: 'https://test.xxx.com', // 测试项目地址
-  baseApi: 'https://test.xxx.com/api', // 测试api请求地址
+  baseUrl: 'http://49.234.114.42', // 测试项目地址
+  baseApi: 'http://49.234.114.42/api', // 测试api请求地址
   APPID: 'xxx',
   APPSECRET: 'xxx',
   $cdn: 'https://www.sunniejs.cn/static'
