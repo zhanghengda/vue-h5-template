@@ -5,7 +5,7 @@
     <div class="content contentDivOne1 native-scroll">
       <div class="center">
         <div class="retult-title">查询结果</div>
-        <div class="ts"><span style="padding-right: 0.2rem">追溯码</span> <span id="traceCode" class="err"></span></div>
+        <div class="ts"><span style="padding-right: 0.2rem">追溯码</span> <span id="traceCode" class="err">3456</span></div>
         <div class="zt" style="display: none">
           <span class="states"></span>，<span class="prompt">追溯码属于</span><span class="serviceProvider"></span>
         </div>
@@ -26,6 +26,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+
 .contentDivOne1 {
   background-color: white !important;
   top: 65px !important;
@@ -34,8 +35,12 @@ export default {}
   display: flex;
   flex-direction: column;
 }
+.err {
+    color: #f00;
+}
 .tit {
-  height: 65px;
+  height: 65PX;
+  margin: 8PX 8PX 0 8PX;
   background-repeat: round;
   background-image: url(~@assets/img/top1.jpg);
   background-size: cover;
@@ -44,7 +49,8 @@ export default {}
 .retult-title {
   color: #1557f1;
   border-bottom: 1px solid #1557f1;
-  padding: 16px 0 12.8px;
+  padding: 0.4rem 0 0.341rem;
+  margin: 0 8PX;
   font-weight: 600;
   letter-spacing: 1.2;
   font-size: 0.4693rem;
@@ -61,7 +67,7 @@ export default {}
   padding: 0 0.48rem 0.64rem 0.48rem;
 }
 .auth-qrcode-img {
-  width: 0.2133rem;
+  width: 2.133rem;
   display: block;
   margin: 0 auto;
 }

@@ -20,8 +20,8 @@
         <!-- Slider -->
         <div class="indexBanner">
           <van-swipe indicator-color="#ff6600" height="10" class="my-swipe" :autoplay="3000">
-            <van-swipe-item class="van-swipe-item" v-for="(image, index) in images" :key="index">
-              <img v-lazy="image" />
+            <van-swipe-item class="van-swipe-item" v-for="(image, index) in productdata.bannerImg.split(',')" :key="index">
+              <img v-lazy="baseUrl+image" />
             </van-swipe-item>
           </van-swipe>
         </div>
@@ -380,29 +380,63 @@
 </template>
 
 <script>
-import { getProductQuery } from '@api/user'
+import { getProductQuery, getBaseUrl } from '@api/user'
 export default {
   data() {
     return {
       list: [],
       tabIndex: 0,
+      productdata: null,
       headerfixed: false,
-      images: ['https://img01.yzcdn.cn/vant/apple-1.jpg', 'https://img01.yzcdn.cn/vant/apple-2.jpg']
+      sn: '',
+      images: []
     }
   },
 
-  computed: {},
+  computed: {
+    baseUrl() {
+      return localStorage.getItem('baseUrl')
+    }
+  },
   created() {
-    this._getProductQuery()
+    if (this.$route.query && this.$route.query.sn) {
+      this.sn = this.$route.query.sn
+          this._getBaseUrl()
+          this._getProductQuery()
+    }
+    else
+    {
+      this.$router.push('/wxm')
+    }
+
   },
   mounted() {},
 
   methods: {
+    _getBaseUrl() {
+      getBaseUrl().then(res => {
+        if (res.code == 0) {
+          localStorage.setItem('baseUrl', res.data)
+        }
+      })
+    },
     _getProductQuery() {
       let param = {
-        productNo: '1234'
+        productNo: this.sn
       }
-      getProductQuery(param).then(res => {})
+      getProductQuery(param).then(res => {
+        if (res.code == 0&&res.data) {
+          this.productdata = res.data
+        }
+        else{
+          this.$router.push({
+            path:'/wxm',
+            query:{
+              sn:this.sn
+            }
+          })
+        }
+      })
     },
     scrollEvent(e) {
       console.log(e.srcElement.scrollTop)
@@ -580,7 +614,7 @@ export default {
 .endpage-a {
   border-radius: 0;
   height: 100%;
-  line-height: 1.3333rem;
+  line-height: 1.1333rem;
 }
 .indexATwo {
   top: 0 !important;
