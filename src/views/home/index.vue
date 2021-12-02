@@ -3,11 +3,7 @@
   <div class="page-group">
     <!-- 你的html代码 -->
     <div class="page page-current" id="xindex">
-      <header class="bar bar-nav tit" id="shopImg">
-        <div>
-          <img alt="" src="https://trace.cciccloud.com/trace-backend/images/2021-11-17/910612857824215040.jpg" />
-        </div>
-      </header>
+      <header class="bar bar-nav tit" id="shopImg"></header>
       <!-- 页尾 -->
       <nav class="bar bar-tab">
         <p class="buttons-row endpage">
@@ -435,14 +431,9 @@ export default {
 }
 .tit {
   height: 65px;
+  background-image: url(~@assets/img/top0.jpg);
   background-repeat: round;
   background-size: cover;
-  div {
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
 }
 .baccol {
   background-color: #e0e3e6;

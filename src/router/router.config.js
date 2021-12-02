@@ -29,5 +29,11 @@ export const constantRouterMap = [
     name: 'authen',
     component: () => import('@/views/home/authen'),
     meta: { title: '防伪查询', keepAlive: false }
+  },
+  {
+    path: '/wxm',
+    name: 'wxm',
+    component: () => import('@/views/home/wxm'),
+    meta: { title: '产品追溯信息', keepAlive: false }
   }
 ]
