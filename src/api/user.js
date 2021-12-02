@@ -30,7 +30,8 @@ export function feedback(data) {
   })
 }
 // 查询产品信息 get 方法
-export function GetProductQuery(params) {
+export function getProductQuery(params) {
+  console.log(params)
   return request({
     url: api.productQuery,
     method: 'get',

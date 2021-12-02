@@ -380,6 +380,7 @@
 </template>
 
 <script>
+import { getProductQuery } from '@api/user'
 export default {
   data() {
     return {
@@ -391,10 +392,18 @@ export default {
   },
 
   computed: {},
-
+  created() {
+    this._getProductQuery()
+  },
   mounted() {},
 
   methods: {
+    _getProductQuery() {
+      let param = {
+        productNo: '1234'
+      }
+      getProductQuery(param).then(res => {})
+    },
     scrollEvent(e) {
       console.log(e.srcElement.scrollTop)
       if (e.srcElement.scrollTop > 375) {
