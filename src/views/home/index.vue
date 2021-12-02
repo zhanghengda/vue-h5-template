@@ -31,13 +31,13 @@
             <div class="baccol-cdiv">
               <div class="baccol-span">
                 <span class="n-product-name">产品名称</span>
-                <span class="n-name-content productname"> GUCCI(古驰)鞋子</span>
+                <span class="n-name-content productname"> {{productdata.productName}}</span>
               </div>
             </div>
             <div>
               <div class="baccol-span1">
                 <span class="n-enterprise-name">企业名称</span>
-                <span class="n-name-content companyNameImg">中国检验认证集团奢侈品鉴定中心</span>
+                <span class="n-name-content companyNameImg">{{productdata.inspectionEnterprise}}</span>
               </div>
             </div>
           </div>
@@ -78,7 +78,7 @@
                       <div class="liststyle-div2">
                         <div class="item-title label indexItemTitle">原产地 :&nbsp;</div>
                         <div class="item-input indexItemInput">
-                          <p class="CountryOfOrigin liststyle">意大利</p>
+                          <p class="CountryOfOrigin liststyle">{{productdata.sourceArea}}</p>
                         </div>
                       </div>
                     </div>
@@ -109,7 +109,7 @@
                       <div class="liststyle-div2">
                         <div class="item-title label indexItemTitle">生产企业 :&nbsp;</div>
                         <div class="item-input indexItemInput">
-                          <p class="productCompany liststyle">中国检验认证集团奢侈品鉴定中心</p>
+                          <p class="productCompany liststyle">{{productdata.produceEnterprise}}</p>
                         </div>
                       </div>
                     </div>
@@ -187,14 +187,12 @@
                 </ul>
               </div>
               <div class="richTextContent" id="richtext" style="display: block">
-                <p>委托单位：致美生活(北京)科技有限公司</p>
-                <p>序列号：TJ2148</p>
-                <p>检验日期：2020.12.22</p>
-                <p>检验结论：送检样品符合品牌/制造商公示的技术信息和工艺特征。</p>
+                <p>委托单位：{{productdata.trustCompany}}</p>
+                <p>序列号：{{productdata.serialNo}}</p>
+                <p>检验日期：{{productdata.inspectionDate}}</p>
+                <p>检验结论：{{productdata.inspectionResult}}</p>
                 <p>备注：</p>
-                <p>1、检验结果仅对送检样品负责，若标签损毁、标签涂改，显示内容无效。</p>
-                <p>2、若对显示的内容和结论持有异议，需在检验日期后15日内提出，逾期不予受理。</p>
-                <p>3、客户信息及样品均由委托单位提供，检验结果不涉及样品品质检测等信息。</p>
+                <p>{{productdata.productRemark}}</p>
               </div>
             </div>
             <div id="tab2" v-if="tabIndex == 1" class="tab active">
@@ -206,7 +204,7 @@
                   src="https://trace.cciccloud.com/trace-backend/images/2021-11-17/910612857824215040.jpg"
                   onclick="showImg(this)"
                 />
-                <span class="companyname tab2-span">中国检验认证集团奢侈品鉴定中心</span>
+                <span class="companyname tab2-span">{{productdata.inspectionEnterprise}}</span>
                 <div class="hb-box" style="display: none">
                   <div class="hz-info dz-box">
                     <span class="hz-left">地址 : </span>
