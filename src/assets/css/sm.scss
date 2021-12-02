@@ -890,8 +890,8 @@ a:active {
   left: 0;
   z-index: 10;
   height: 1.17rem;
-  padding-right: 0.27rem;
-  padding-left: 0.27rem;
+  // padding-right: 0.27rem;
+  // padding-left: 0.27rem;
   backface-visibility: hidden;
 }
 .bar:after {
@@ -2419,11 +2419,10 @@ input[type='button'].button {
   position: fixed;
   z-index: 99;
   width: 100%;
+  top: 65px;
 }
 /* === Tabs === */
-.tabs .tab {
-  display: none;
-}
+
 .tabs .tab.active {
   display: block;
 }

@@ -12,39 +12,13 @@
 </template>
 
 <script>
-import TabBar from '@/components/TabBar'
 export default {
   name: 'AppLayout',
   data() {
-    return {
-      tabbars: [
-        {
-          title: '首页',
-          to: {
-            name: 'Home'
-          }
-        },
-        {
-          title: '关于我',
-          to: {
-            name: 'About'
-          }
-          // icon: 'user-o'
-        }
-      ]
-    }
+    return {}
   },
-  components: {
-    TabBar
-  },
-  methods: {
-    handleChange(v) {
-      console.log('tab value:', v)
-    }
-  }
+  components: {},
+  methods: {}
 }
 </script>
-<style lang="scss" scoped>
-.layout-content {
-}
-</style>
+<style lang="scss" scoped></style>

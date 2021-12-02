@@ -71,8 +71,8 @@ module.exports = {
         // 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀
         // 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
         prependData: `
-          @import "assets/css/mixin.scss";
-          @import "assets/css/variables.scss";
+          @import "@assets/css/mixin.scss";
+          @import "@assets/css/variables.scss";
           $cdn: "${defaultSettings.$cdn}";
           `
       }
@@ -95,10 +95,10 @@ module.exports = {
     // 别名 alias
     config.resolve.alias
       .set('@', resolve('src'))
-      .set('assets', resolve('src/assets'))
-      .set('api', resolve('src/api'))
-      .set('views', resolve('src/views'))
-      .set('components', resolve('src/components'))
+      .set('@assets', resolve('src/assets'))
+      .set('@api', resolve('src/api'))
+      .set('@views', resolve('src/views'))
+      .set('@components', resolve('src/components'))
 
     /**
      * 添加CDN参数到htmlWebpackPlugin配置中

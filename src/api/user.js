@@ -20,7 +20,42 @@ export function getUserInfo(data) {
     hideloading: true
   })
 }
-
+//提交反馈 post 方法
+export function feedback(data) {
+  return request({
+    url: api.consumerFeedback,
+    method: 'post',
+    data,
+    hideloading: true
+  })
+}
+// 查询产品信息 get 方法
+export function GetProductQuery(params) {
+  return request({
+    url: api.productQuery,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+// 查询防伪 get 方法
+export function GetIdentify(params) {
+  return request({
+    url: api.identify,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+// 图片路径 get 方法
+export function getBaseUrl(params) {
+  return request({
+    url: api.baseUrl,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
 // 用户名称 get 方法
 export function getUserName(params) {
   return request({
