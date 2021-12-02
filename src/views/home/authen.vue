@@ -52,7 +52,7 @@
       </p>
       <p class="c-mrg-0">（工作日时间 09:00 - 16:30）</p>
       <div class="auth-qrcode-frame c-none" style="margin-top: 10px">
-        <img class="auth-qrcode-img" src="img/qrCode.jpg" />
+        <img class="auth-qrcode-img" src="@assets/img/qrCode.jpg" />
         <span class="auth-qrcode-des">扫码获取更多帮助</span>
       </div>
     </div>

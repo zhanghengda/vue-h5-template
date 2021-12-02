@@ -13,7 +13,7 @@
         <div class="bottom">建议拨打<span class="dh">0512-67998073</span>让客服帮助你</div>
         <!-- <span class="ds-b">抱歉  sorry ！</span> -->
         <div class="auth-qrcode-frame" style="margin-top: 0.8rem">
-          <img class="auth-qrcode-img" src="img/qrCode.jpg" />
+          <img class="auth-qrcode-img" src="@assets/img/qrCode.jpg" />
           <span class="auth-qrcode-des">扫码获取更多帮助</span>
         </div>
       </div>
