@@ -209,79 +209,18 @@
                   onclick="showImg(this)"
                 />
                 <span class="companyname tab2-span">{{ productdata.inspectionEnterprise }}</span>
-                <div class="hb-box" style="display: none">
-                  <div class="hz-info dz-box">
-                    <span class="hz-left">地址 : </span>
-                    <span class="dz"></span>
-                  </div>
-                  <div class="hz-info dh-box">
-                    <span class="hz-left">电话 : </span>
-                    <span class="dh">江苏省</span>
-                  </div>
-                  <div class="hz-info js-box">
-                    <span class="hz-left">介绍 : </span>
-                    <span class="js">江苏省</span>
-                  </div>
-                  <div class="hz-info xc-box">
-                    <span class="hz-left">宣传图片 : </span>
-                    <div class="hz-img xctp"></div>
-                  </div>
-                </div>
-                <span class="businessElectronicFile tab2-span2"
-                  ><p>
-                    <span style="font-family: 微软雅黑, 'Microsoft YaHei'; color: rgb(15, 36, 62)"
-                      >&nbsp; &nbsp; &nbsp;
-                      &nbsp;中检集团奢侈品鉴定中心是中检集团设立的专门从事奢侈品鉴定与培训业务的“中国”字头第三方奢侈品鉴定平台，落地在中检北京公司。中检集团奢侈品鉴定中心致力以独立于买卖各方的身份，为社会各界提供公正、诚信的奢侈品鉴定及培训服务。</span
-                    >
-                  </p>
-                  <p>
-                    <span style="color: rgb(15, 36, 62); font-family: 微软雅黑, 'Microsoft YaHei'"
-                      >&nbsp; &nbsp; &nbsp;
-                      &nbsp;中检集团奢侈品鉴定中心与中检集团溯源技术服务有限公司共同打造了中检奢侈品鉴定溯源防伪系统，向外界正式推出奢侈品鉴定溯源防伪服务。该系统应用“一品（物）一码”溯源专利防伪技术，通过扫一扫，就能随时了解奢侈品鉴定信息，真正做到鉴定溯源防伪一体化，为奢侈品市场保驾护航。经过鉴定溯源的奢侈品都会有中检中奢中心“鉴定溯源ID身份证”，“验明正身”的同时，提升消费体验，让消费者购物更放心。</span
-                    >
-                  </p>
-                  <p>
-                    <span style="color: rgb(15, 36, 62); font-family: 微软雅黑, 'Microsoft YaHei'"
-                      ><img
-                        src="/ueditor/upload/image/20200521/1590048828117098165.jpg"
-                        title="1590048828117098165.jpg"
-                        alt="微信图片_20200521160001.jpg"
-                        onclick="showImg(this)"
-                        style="max-width: 100%; height: auto; display: block; margin: 0px auto"
-                    /></span>
-                  </p>
-                  <p>
-                    <img
-                      src="/ueditor/upload/image/20200521/1590048841611005669.jpg"
-                      title="1590048841611005669.jpg"
-                      alt="微信图片_20200521160002.jpg"
-                      onclick="showImg(this)"
-                      style="max-width: 100%; height: auto; display: block; margin: 0px auto"
-                    /><img
-                      src="/ueditor/upload/image/20200521/1590048848871028263.jpg"
-                      title="1590048848871028263.jpg"
-                      alt="微信图片_202005211600021.jpg"
-                      onclick="showImg(this)"
-                      style="max-width: 100%; height: auto; display: block; margin: 0px auto"
-                    />
-                  </p>
-                  <p><br /></p>
-                  <p><br /></p
-                ></span>
+                <span v-html="productdata.enterpriseInfo" class="businessElectronicFile tab2-span2"> </span>
                 <div class="bot"></div>
               </div>
               <div class="tab2-div3">
                 <span class="tab2-span3"> 资质信息</span>
               </div>
-              <div class="tab2-div4" id="imgcontend" style="text-align: center">
-                <div>
-                  <img
-                    style="max-width: 100%"
-                    onclick="showImg(this)"
-                    src="https://trace.cciccloud.com/trace-backend"
-                  />
-                </div>
-              </div>
+              <div
+                class="tab2-div4"
+                id="imgcontend"
+                v-html="productdata.qualificationInfo"
+                style="text-align: center"
+              ></div>
             </div>
             <!-- 流程列表 -->
             <div id="tab3" v-if="tabIndex == 2" class="tab autoheigth active">
@@ -349,7 +288,7 @@
                           padding-left: 12px;
                           font-size: 0.32rem;
                         "
-                        >2020-12-22 记录</span
+                        >{{ productdata.inspectionDate }} 记录</span
                       >
                     </div>
                     <div
@@ -358,23 +297,12 @@
                         border-bottom: 1px solid #bfbfbf;
                         border-left: 1px solid #bfbfbf;
                         border-right: 1px solid #bfbfbf;
+                        padding-top: 5px;
+                        padding-left: 10px;
+                        padding-right: 10px;
                       "
                     >
-                      <div></div>
-                      <label style="display: block; padding-top: 5px; padding-left: 10px; padding-right: 10px"
-                        ><span style="color: #333; font-weight: bold; font-size: 0.32rem">委托方简介 : </span
-                        ><span style="color: #666; font-size: 0.32rem"
-                          >红布林是中国二手奢侈品行业引领者，为消费者提供奢侈品购买和寄卖一站式服务。三年来连续完成多轮融资，斩获众多业界大奖，成长为国内领先的大型中高端时尚二手交易平台，致力于高端审美资源的循环利用。红布林在培训、鉴定等领域深度携手中检集团奢侈品鉴定中心，为用户去伪存真，保驾护航。专属一站式寄卖服务、专业拍摄及物流仓储、商品智能定价、7x18h贴心客服，100%正品保障。高端闲置放心买卖，时髦生活真的不贵。
-                          <p>注：以上信息由委托单位自行提供，并对其真实性承担全部法律责任。</p></span
-                        ></label
-                      ><label style="display: block; padding-top: 5px; padding-left: 10px; padding-right: 10px"
-                        ><span style="color: #333; font-weight: bold; display: block; font-size: 0.32rem"
-                          >委托方简介 : </span
-                        ><img
-                          style="width: 100%; margin-top: 10px"
-                          src="https://trace.cciccloud.com/trace-backend/images/2020-12/790873527052926976.png"
-                          onclick="showImg(this)"
-                      /></label>
+                      <div v-html="productdata.trustInfo"></div>
                       <div style="margin-bottom: 10px"></div>
                     </div>
                   </div>
@@ -471,6 +399,19 @@ export default {
       if (e.srcElement.scrollTop + e.srcElement.clientHeight == e.srcElement.scrollHeight) {
         console.log('嘿嘿我在底部触发了')
       }
+    },
+
+    //微信函数
+    imagePreview(curSrc, srcList) {
+      //这个检测是否参数为空
+      if (!curSrc || !srcList || srcList.length == 0) {
+        return
+      }
+      //这个使用了微信浏览器提供的JsAPI 调用微信图片浏览器
+      WeixinJSBridge.invoke('imagePreview', {
+        current: curSrc,
+        urls: srcList
+      })
     },
     switchTab(item) {
       this.tabIndex = item
@@ -688,15 +629,29 @@ export default {
   height: 0.6667rem;
   background-color: #fff;
 }
+
 .tab2-span2 {
   display: block;
   font-size: 0.4rem;
   color: #666;
   padding: 0px 19px;
+  ::v-deep {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
+
 .tab2-div4 {
   height: 3.4667rem;
   background: #fff;
+  ::v-deep {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 .tab3-ul {
