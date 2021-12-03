@@ -978,7 +978,7 @@ a:active {
   display: block;
   width: 100%;
   padding: 0;
-  margin: 0 -0.5rem;
+  margin: 0 -0rem;
   font-size: 0.85rem;
   font-weight: 500;
   line-height: 2.2rem;
@@ -1101,10 +1101,10 @@ a:active {
   width: 100%;
 }
 .bar .button-nav.pull-left {
-  margin-left: -0.25rem;
+  // margin-left: -0.25rem;
 }
 .bar .button-nav.pull-left .icon-left-nav {
-  margin-right: -0.15rem;
+  // margin-right: -0.15rem;
 }
 .bar .button-nav.pull-right {
   margin-right: -0.25rem;

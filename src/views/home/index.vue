@@ -1,16 +1,16 @@
 <!-- home -->
 <template>
-  <div class="page-group">
+  <div class="page-group" v-if="productdata">
     <!-- 你的html代码 -->
     <div class="page page-current" id="xindex">
       <header class="bar bar-nav tit" id="shopImg"></header>
       <!-- 页尾 -->
       <nav class="bar bar-tab">
         <p class="buttons-row endpage">
-          <a class="button endpage-a external indexAOne" id="complaints" @click="$router.push('/complaints')"
+          <a class="button endpage-a external indexAOne" id="complaints" @click="feedback"
             ><span class="endpage-span">消费反馈</span></a
           >
-          <a class="button endpage-a external indexATwo" id="infosearch" @click="$router.push('/authen')"
+          <a class="button endpage-a external indexATwo" id="infosearch" @click="search"
             ><span class="endpage-span-search">防伪查询</span></a
           >
         </p>
@@ -19,9 +19,13 @@
         <!-- 图片幻灯片 -->
         <!-- Slider -->
         <div class="indexBanner">
-          <van-swipe indicator-color="#ff6600" height="10" class="my-swipe" :autoplay="3000">
-            <van-swipe-item class="van-swipe-item" v-for="(image, index) in productdata.bannerImg.split(',')" :key="index">
-              <img v-lazy="baseUrl+image" />
+          <van-swipe indicator-color="#ff6600" v-if="productdata" height="10" class="my-swipe" :autoplay="3000">
+            <van-swipe-item
+              class="van-swipe-item"
+              v-for="(image, index) in productdata.bannerImg.split(',')"
+              :key="index"
+            >
+              <img v-lazy="baseUrl + image" />
             </van-swipe-item>
           </van-swipe>
         </div>
@@ -31,13 +35,13 @@
             <div class="baccol-cdiv">
               <div class="baccol-span">
                 <span class="n-product-name">产品名称</span>
-                <span class="n-name-content productname"> {{productdata.productName}}</span>
+                <span v-if="productdata" class="n-name-content productname"> {{ productdata.productName }}</span>
               </div>
             </div>
             <div>
               <div class="baccol-span1">
                 <span class="n-enterprise-name">企业名称</span>
-                <span class="n-name-content companyNameImg">{{productdata.inspectionEnterprise}}</span>
+                <span class="n-name-content companyNameImg">{{ productdata.inspectionEnterprise }}</span>
               </div>
             </div>
           </div>
@@ -78,7 +82,7 @@
                       <div class="liststyle-div2">
                         <div class="item-title label indexItemTitle">原产地 :&nbsp;</div>
                         <div class="item-input indexItemInput">
-                          <p class="CountryOfOrigin liststyle">{{productdata.sourceArea}}</p>
+                          <p class="CountryOfOrigin liststyle">{{ productdata.sourceArea }}</p>
                         </div>
                       </div>
                     </div>
@@ -109,7 +113,7 @@
                       <div class="liststyle-div2">
                         <div class="item-title label indexItemTitle">生产企业 :&nbsp;</div>
                         <div class="item-input indexItemInput">
-                          <p class="productCompany liststyle">{{productdata.produceEnterprise}}</p>
+                          <p class="productCompany liststyle">{{ productdata.produceEnterprise }}</p>
                         </div>
                       </div>
                     </div>
@@ -187,12 +191,12 @@
                 </ul>
               </div>
               <div class="richTextContent" id="richtext" style="display: block">
-                <p>委托单位：{{productdata.trustCompany}}</p>
-                <p>序列号：{{productdata.serialNo}}</p>
-                <p>检验日期：{{productdata.inspectionDate}}</p>
-                <p>检验结论：{{productdata.inspectionResult}}</p>
+                <p>委托单位：{{ productdata.trustCompany }}</p>
+                <p>序列号：{{ productdata.serialNo }}</p>
+                <p>检验日期：{{ productdata.inspectionDate }}</p>
+                <p>检验结论：{{ productdata.inspectionResult }}</p>
                 <p>备注：</p>
-                <p>{{productdata.productRemark}}</p>
+                <p>{{ productdata.productRemark }}</p>
               </div>
             </div>
             <div id="tab2" v-if="tabIndex == 1" class="tab active">
@@ -204,7 +208,7 @@
                   src="https://trace.cciccloud.com/trace-backend/images/2021-11-17/910612857824215040.jpg"
                   onclick="showImg(this)"
                 />
-                <span class="companyname tab2-span">{{productdata.inspectionEnterprise}}</span>
+                <span class="companyname tab2-span">{{ productdata.inspectionEnterprise }}</span>
                 <div class="hb-box" style="display: none">
                   <div class="hz-info dz-box">
                     <span class="hz-left">地址 : </span>
@@ -399,14 +403,11 @@ export default {
   created() {
     if (this.$route.query && this.$route.query.sn) {
       this.sn = this.$route.query.sn
-          this._getBaseUrl()
-          this._getProductQuery()
-    }
-    else
-    {
+      this._getBaseUrl()
+      this._getProductQuery()
+    } else {
       this.$router.push('/wxm')
     }
-
   },
   mounted() {},
 
@@ -423,18 +424,24 @@ export default {
         productNo: this.sn
       }
       getProductQuery(param).then(res => {
-        if (res.code == 0&&res.data) {
+        if (res.code == 0 && res.data) {
           this.productdata = res.data
-        }
-        else{
+          document.title = this.productdata.productName
+        } else {
           this.$router.push({
-            path:'/wxm',
-            query:{
-              sn:this.sn
+            path: '/wxm',
+            query: {
+              sn: this.sn
             }
           })
         }
       })
+    },
+    feedback() {
+      this.$router.push({ path: '/complaints', query: { sn: this.productdata.productNo } })
+    },
+    search() {
+      this.$router.push({ path: '/authen', query: { sn: this.productdata.productNo } })
     },
     scrollEvent(e) {
       console.log(e.srcElement.scrollTop)
@@ -471,7 +478,7 @@ export default {
   }
 }
 .tit {
-  height: 65px;
+  height: 1.7333rem;
   background-image: url(~@assets/img/top0.jpg);
   background-repeat: round;
   background-size: cover;
