@@ -34,10 +34,10 @@
             溯源号码：<span class="auth-serinum">{{ $route.query.sn }}</span>
           </p>
           <p class="auth-product-name" v-if="matchStatus == 1 || matchStatus == 2">
-            产品名称：<span class="auth-pro-name"></span>
+            产品名称：<span class="auth-pro-name">{{ $route.query.productName }}</span>
           </p>
           <p class="auth-comp-name" v-if="matchStatus == 1 || matchStatus == 2">
-            企业名称：<span class="auth-com-name"></span>
+            企业名称：<span class="auth-com-name">{{ $route.query.produceEnterprise }}</span>
           </p>
         </div>
         <!-- <div class="auth-contact-item">

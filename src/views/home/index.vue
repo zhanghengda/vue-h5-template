@@ -452,7 +452,14 @@ export default {
       this.$router.push({ path: '/complaints', query: { sn: this.productdata.productNo } })
     },
     search() {
-      this.$router.push({ path: '/authen', query: { sn: this.productdata.productNo } })
+      this.$router.push({
+        path: '/authen',
+        query: {
+          sn: this.productdata.productNo,
+          productName: this.productdata.productName,
+          produceEnterprise: this.productdata.produceEnterprise
+        }
+      })
     },
     scrollEvent(e) {
       console.log(e.srcElement.scrollTop)

@@ -2476,6 +2476,8 @@ input[type='button'].button {
 .page.page-current,
 .page-group.page-current {
   overflow: hidden;
+  max-width: 11.8rem;
+  margin: 0 auto;
 }
 .page-group {
   display: block;
