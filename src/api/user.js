@@ -40,7 +40,7 @@ export function getProductQuery(params) {
   })
 }
 // 查询防伪 get 方法
-export function GetIdentify(params) {
+export function getIdentify(params) {
   return request({
     url: api.identify,
     method: 'get',

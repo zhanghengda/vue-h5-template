@@ -288,7 +288,15 @@
               <ul class="tab3-ul" id="ullist">
                 <li style="width: 95%">
                   <img
+                    v-if="isShow"
                     src="@assets/img/dot2.jpg"
+                    style="position: absolute; left: 15px; margin-top: 14px; width: 21px; height: 21px"
+                    width="28px"
+                    height="28px"
+                  />
+                  <img
+                    v-else
+                    src="@assets/img/dot1.jpg"
                     style="position: absolute; left: 15px; margin-top: 14px; width: 21px; height: 21px"
                     width="28px"
                     height="28px"
@@ -298,6 +306,7 @@
                     style="padding: 14px; padding-left: 8px"
                     butnum="0004351623_11284"
                     compk="b7269300aad64660b6faae8aa2850f51"
+                    @click="onShow"
                   >
                     <span>委托方简介</span>
                     <div style="float: right">
@@ -307,20 +316,18 @@
                         >收起</span
                       ><img
                         class="showIcon"
-                        style="
-                          display: block;
-                          float: right;
-                          padding-top: 6%;
-                          padding-bottom: 9%;
-                          transform: rotate(180deg);
-                        "
+                        :class="isShow ? 'ishowIcons' : ''"
                         src="@assets/img/data3.jpg"
                         pk="ca772ae2058349e2be9537535b530aec"
                       />
                     </div>
                   </div>
                   <div style="border-bottom: 1px solid #bfbfbf; height: 1px; position: absolute; width: 85%"></div>
-                  <div style="display: black; margin: 0.1rem; border-radius: 10px; margin-top: 10px" class="showWrap">
+                  <div
+                    style="display: black; margin: 0.1rem; border-radius: 10px; margin-top: 10px"
+                    class="showWrap"
+                    v-if="isShow"
+                  >
                     <div
                       style="
                         height: 32px;
@@ -391,6 +398,7 @@ export default {
       productdata: null,
       headerfixed: false,
       sn: '',
+      isShow: false,
       images: []
     }
   },
@@ -436,6 +444,9 @@ export default {
           })
         }
       })
+    },
+    onShow() {
+      this.isShow = !this.isShow
     },
     feedback() {
       this.$router.push({ path: '/complaints', query: { sn: this.productdata.productNo } })
@@ -690,6 +701,13 @@ export default {
   padding-left: 14px;
   margin-left: 25px;
   list-style-type: none;
+}
+.ishowIcons {
+  display: block;
+  float: right;
+  padding-top: 6%;
+  padding-bottom: 9%;
+  transform: rotate(180deg);
 }
 .showIcons {
   padding: 14px;
