@@ -192,11 +192,10 @@
               </div>
               <div class="richTextContent" id="richtext" style="display: block">
                 <p>委托单位：{{ productdata.trustCompany }}</p>
-                <p>序列号：{{ productdata.serialNo }}</p>
+                <p v-if="productdata.serialNo">序列号：{{ productdata.serialNo }}</p>
                 <p>检验日期：{{ productdata.inspectionDate }}</p>
                 <p>检验结论：{{ productdata.inspectionResult }}</p>
-                <p>备注：</p>
-                <p>{{ productdata.productRemark }}</p>
+                <span v-html="productdata.productRemark"></span>
               </div>
             </div>
             <div id="tab2" v-if="tabIndex == 1" class="tab active">
@@ -302,7 +301,7 @@
                         padding-right: 10px;
                       "
                     >
-                      <div v-html="productdata.trustInfo"></div>
+                      <div class="showWrap-content" v-html="productdata.trustInfo"></div>
                       <div style="margin-bottom: 10px"></div>
                     </div>
                   </div>
@@ -642,7 +641,14 @@ export default {
     }
   }
 }
-
+.showWrap-content {
+  ::v-deep {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
 .tab2-div4 {
   height: 3.4667rem;
   background: #fff;
