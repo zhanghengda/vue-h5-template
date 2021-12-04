@@ -562,7 +562,7 @@ export default {
     margin-left: 0;
     text-indent: 0;
     line-height: 24px;
-    font-weight: normal;
+    font-weight: bold;
   }
 }
 .endpage {
