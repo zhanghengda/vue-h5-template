@@ -19,13 +19,27 @@ export function formatDate(time, fmt) {
   }
   for (const k in o) {
     if (new RegExp(`(${k})`).test(fmt)) {
+      debugger
       const str = o[k] + ''
       fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
     }
   }
   return fmt
 }
+/**
+ *格式化时间
+ *yyyy-MM-dd hh:mm:ss
+ */
+export function formatDate2(time, fmt) {
+  if (time === undefined || '') {
+    return
+  }
+  const date = new Date(time)
 
+  let yue = date.getMonth() + 1
+  let day = date.getDate()
+  return date.getFullYear() + '年' + (yue < 10 ? '0' : '') + day + '月' + (day < 10 ? '0' : '') + day + '日'
+}
 function padLeftZero(str) {
   return ('00' + str).substr(str.length)
 }

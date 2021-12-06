@@ -23,7 +23,8 @@
             <span v-if="matchStatus == 3" class="auth-result-fail">此次查询无效 请仔细核对4位防伪编码输入是否正确</span>
             <span class="auth-result-ok" v-if="matchStatus == 1">查询有效，验证成功</span>
             <div class="auth-result-warn" v-if="matchStatus == 2">
-              防伪码首次查询时间 <span class="auth-query-time">{{ firstIdentifyTime }}</span
+              防伪码首次查询时间
+              <span class="auth-query-time">{{ firstIdentifyTime | formatDate2('yyyy-MM-dd') }}</span
               >，查询次数 <span class="auth-query-count">{{ identifyCount }}</span
               >次，谨防假冒。
             </div>
@@ -92,10 +93,10 @@ export default {
       }
       getIdentify(param).then(res => {
         if (res.code == 0) {
-          if (res.data.match && res.data.identifyCount == 0) {
+          if (res.data.match && res.data.identifyCount == 1) {
             this.match = res.data.match
             this.matchStatus = 1
-          } else if (res.data.match && res.data.identifyCount != 0) {
+          } else if (res.data.match && res.data.identifyCount > 1) {
             this.match = res.data.match
             this.identifyCount = res.data.identifyCount
             this.firstIdentifyTime = res.data.firstIdentifyTime
