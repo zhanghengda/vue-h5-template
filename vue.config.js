@@ -54,7 +54,7 @@ module.exports = {
     proxy: {
       //配置跨域
       '/api': {
-        target: 'http://49.234.114.42',
+        target: 'https://qqqic.com',
         // ws:true,
         changOrigin: true,
         pathRewrite: {

@@ -348,11 +348,15 @@ export default {
 
   methods: {
     _getBaseUrl() {
-      getBaseUrl().then(res => {
-        if (res.code == 0) {
-          localStorage.setItem('baseUrl', res.data)
-        }
-      })
+      if (location.hostname === 'localhost') {
+        getBaseUrl().then(res => {
+          if (res.code == 0) {
+            localStorage.setItem('baseUrl', res.data)
+          }
+        })
+      } else {
+        localStorage.setItem('baseUrl', `https://${location.hostname}/img`)
+      }
     },
     _getProductQuery() {
       let param = {
