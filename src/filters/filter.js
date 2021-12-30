@@ -38,7 +38,7 @@ export function formatDate2(time, fmt) {
 
   let yue = date.getMonth() + 1
   let day = date.getDate()
-  return date.getFullYear() + '年' + (yue < 10 ? '0' : '') + day + '月' + (day < 10 ? '0' : '') + day + '日'
+  return date.getFullYear() + '年' + (yue < 10 ? '0' : '') + yue + '月' + (day < 10 ? '0' : '') + day + '日'
 }
 function padLeftZero(str) {
   return ('00' + str).substr(str.length)
