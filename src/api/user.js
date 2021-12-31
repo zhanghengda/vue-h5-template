@@ -40,6 +40,15 @@ export function getProductQuery(params) {
   })
 }
 // 查询防伪 get 方法
+export function baseConfig(params) {
+  return request({
+    url: api.baseConfig,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+// 查询防伪 get 方法
 export function getIdentify(params) {
   return request({
     url: api.identify,

@@ -388,7 +388,8 @@ export default {
         query: {
           sn: this.productdata.productNo,
           productName: this.productdata.productName,
-          produceEnterprise: this.productdata.produceEnterprise
+          produceEnterprise: this.productdata.produceEnterprise,
+          needTips: this.productdata.needTips
         }
       })
     },

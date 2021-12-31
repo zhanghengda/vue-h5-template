@@ -41,24 +41,14 @@
             企业名称：<span class="auth-com-name">{{ $route.query.produceEnterprise }}</span>
           </p>
         </div>
-        <!-- <div class="auth-contact-item">
-							<div class="auth-qrcode-frame c-none">
-								<img class="auth-qrcode-img" src="img/qrCode.jpg" />
-								<span class="auth-qrcode-des">扫码获取更多帮助</span>
-							</div>
-							<p class="c-mrg-0">如需咨询，请拨打&nbsp;
-								<a class="auth-contact-phone" href="tel:0512-67998073">0512 - 67998073</a>
-							</p>
-							<p class="c-mrg-0">（工作日时间 08:45 - 17:00）</p>
-						</div> -->
       </div>
     </div>
     <div class="auth-contact-item">
-      <p class="c-mrg-0">
-        如需咨询，请拨打&nbsp;
-        <a class="auth-contact-phone dh">01058619556(购买3日未激活)客服时间：工作日9:00~12:00/13:30-17:30</a>
+      <p class="c-mrg-0" v-if="needTips">
+        {{ configInfo.helpTips.split(' ')[0] }}&nbsp;
+        <a class="auth-contact-phone dh">{{ configInfo.helpTips.split(' ')[1] }}</a>
       </p>
-      <p class="c-mrg-0">（工作日时间 09:00 - 16:30）</p>
+      <p v-if="needTips" class="c-mrg-0">（{{ configInfo.helpTips.split(' ')[2] }}）</p>
       <div class="auth-qrcode-frame" v-if="matchStatus != 0" style="margin-top: 10px">
         <img class="auth-qrcode-img" src="@assets/img/qrCode.jpg" />
         <span class="auth-qrcode-des">扫码获取更多帮助</span>
@@ -68,7 +58,7 @@
 </template>
 
 <script>
-import { getIdentify } from '@api/user'
+import { getIdentify, baseConfig } from '@api/user'
 
 export default {
   data() {
@@ -78,10 +68,26 @@ export default {
       matchStatus: 0,
       identifyCount: '',
       firstIdentifyTime: '',
-      productNo: this.$route.query.sn
+      productNo: this.$route.query.sn,
+      needTips: this.$route.query.needTips,
+      configInfo: {
+        helpTips: '',
+        helpLink: '',
+        helpPhone: ''
+      }
+
+      // \"helpTips\": \"如需咨询，请拨打 01058619556（购买3日未激活） 客服时间：工作日9:00~12:00/13:30~17:30\",\"helpPhone\": \"0512-67998073\",\"helpLink\": \"http://xxxx.com\"
     }
   },
+  created() {
+    this.getbaseconfig()
+  },
   methods: {
+    getbaseconfig() {
+      baseConfig('').then(res => {
+        this.configInfo = JSON.parse(res.data)
+      })
+    },
     authSearch() {
       if (!this.code) {
         alert('请输入正确的验证码!')
