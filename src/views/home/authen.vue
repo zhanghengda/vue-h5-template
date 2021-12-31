@@ -44,11 +44,11 @@
       </div>
     </div>
     <div class="auth-contact-item">
-      <p class="c-mrg-0" v-if="needTips">
+      <p class="c-mrg-0" v-if="needTips == 'true'">
         {{ configInfo.helpTips.split(' ')[0] }}&nbsp;
         <a class="auth-contact-phone dh">{{ configInfo.helpTips.split(' ')[1] }}</a>
       </p>
-      <p v-if="needTips" class="c-mrg-0">（{{ configInfo.helpTips.split(' ')[2] }}）</p>
+      <p v-if="needTips == 'true'" class="c-mrg-0">（{{ configInfo.helpTips.split(' ')[2] }}）</p>
       <div class="auth-qrcode-frame" v-if="matchStatus != 0" style="margin-top: 10px">
         <img class="auth-qrcode-img" src="@assets/img/qrCode.jpg" />
         <span class="auth-qrcode-des">扫码获取更多帮助</span>
