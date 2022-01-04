@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const resolve = dir => path.join(__dirname, dir)
 // page title
-const name = defaultSettings.title || '追溯'
+const name = defaultSettings.title || '产品追溯信息'
 // 生产环境，测试和正式
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 // externals

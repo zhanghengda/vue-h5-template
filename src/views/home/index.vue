@@ -193,7 +193,7 @@
               <div class="richTextContent" id="richtext" style="display: block">
                 <p>委托单位：{{ productdata.trustCompany }}</p>
                 <p v-if="productdata.serialNo">序列号：{{ productdata.serialNo }}</p>
-                <p>检验日期：{{ productdata.inspectionDate }}</p>
+                <p>检验日期：{{ productdata.inspectionDate.replace(/\-/g, '.') }}</p>
                 <p>检验结论：{{ productdata.inspectionResult }}</p>
                 <span v-html="productdata.productRemark"></span>
               </div>
@@ -365,7 +365,7 @@ export default {
       getProductQuery(param).then(res => {
         if (res.code == 0 && res.data) {
           this.productdata = res.data
-          document.title = this.productdata.productName
+          document.title = this.productdata.productName + '追溯信息'
         } else {
           this.$router.push({
             path: '/wxm',
@@ -389,7 +389,8 @@ export default {
           sn: this.productdata.productNo,
           productName: this.productdata.productName,
           produceEnterprise: this.productdata.produceEnterprise,
-          needTips: this.productdata.needTips
+          needTips: this.productdata.needTips,
+          needQrCode: this.productdata.needQrCode
         }
       })
     },
