@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { constantRouterMap } from './router.config.js'
+import { constantRouterMap, constantRouterMap1 } from './router.config.js'
 
 // hack router push callback
 const originalPush = Router.prototype.push
@@ -16,7 +16,7 @@ const createRouter = () =>
     // mode: 'history', // 如果你是 history模式 需要配置vue.config.js publicPath
     // base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
-    routes: constantRouterMap
+    routes: constantRouterMap1
   })
 
 const router = createRouter()
