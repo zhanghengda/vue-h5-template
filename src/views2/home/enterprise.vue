@@ -1,102 +1,145 @@
-<!-- home -->
 <template>
   <div class="page-group" v-if="productdata">
+          <!-- 标题栏 -->
+        <header class="bar bar-nav complaintHeader">
+          <button class="button button-link button-nav pull-left complaintHeaderIn">
+            <div>
+              <a href="#" onclick="javascript :history.back(-1);"
+                ><span class="icon icon-left complaints-a complaintA"></span>
+                <span class="complaints-span">返回</span></a
+              >
+            </div>
+          </button>
+          <h1 class="title complaints-h1">企业信息</h1>
+        </header>
     <!-- 你的html代码 -->
     <div class="page page-current" id="xindex">
-      <!-- <header class="bar bar-nav tit" id="shopImg"></header> -->
-      <!-- 页尾 -->
-      <nav class="bar bar-tab">
-        <p class="buttons-row endpage">
-          <a class="button endpage-a external indexAOne" id="complaints" @click="feedback"
-            ><span class="endpage-span">消费反馈</span></a
+      <div class="content contentDivOne native-scroll" @scroll="scrollEvent">
+        <!-- 标签页 -->
+        <div class="buttons-tab fixed-tab" :class="headerfixed ? 'buttons-fixed' : ''" data-offset="65">
+          <a
+            @click="switchTab(1)"
+            class="tab-link button tabstyle"
+            :class="tabIndex == 1 ? 'active' : ''"
+            id="companyid"
+            >企业信息</a
           >
-          <a class="button endpage-a external indexATwo" id="infosearch" @click="search"
-            ><span class="endpage-span-search">企业信息</span></a
+          <a @click="switchTab(2)" class="tab-link button tabstyle" :class="tabIndex == 2 ? 'active' : ''" id="origin"
+            >追溯信息</a
           >
-        </p>
-      </nav>
-      <div class="content-box">
-        <div class="left"></div>
-        <div class="content contentDivOne native-scroll right" @scroll="scrollEvent">
-          <!-- 图片幻灯片 -->
-          <div class="header-img">
-            <img class="left" src="@assets/img/bar_logo.jpg" />
-            <img class="right" src="@assets/img/t_logo.jpg" />
-          </div>
+        </div>
 
-          <!-- 表单列表 -->
-          <div class="list-block liststyle">
-            <ul class="productdata">
-              <li class="brandName">
-                <div class="item-content tab1-div indexItemContentTwo">
-                  <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">品牌/型号 :&nbsp;</div>
-                    <div class="item-input indexItemInput">
-                      <p class="brandname liststyle">{{ productdata.productName }}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li class="productdate">
-                <div class="item-content indexItemContentTwo">
-                  <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">检验日期 :&nbsp;</div>
-                    <div class="item-input indexItemInput">
-                      <p class="productDate liststyle">{{ productdata.inspectionDate.replace(/\-/g, '.') }}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <!-- Date -->
-              <li class="infor">
-                <div class="item-content indexItemContentTwo">
-                  <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">生产编码 :&nbsp;</div>
-                    <div class="item-input indexItemInput">
-                      <p class="Infor liststyle"></p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="productart">
-                <div class="item-content indexItemContentFour">
-                  <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">外观状态描述 :&nbsp;</div>
-                    <div class="item-input indexItemInput">
-                      <p class="productArt liststyle"></p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="new-spec">
-                <div class="item-content indexItemContentTwo">
-                  <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">鉴定结论 :&nbsp;</div>
-                    <div class="item-input indexItemInput">
-                      <p class="spec-val liststyle">{{ productdata.inspectionResult }}</p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="songjian">送鉴样品部分实物图</div>
-
-          <!-- Slider -->
-          <div class="indexBanner" v-if="productdata">
-            <div class="banner-content" v-for="(image, index) in productdata.bannerImg.split(',')" :key="index">
-              <img v-lazy="baseUrl + image" />
-            </div>
-          </div>
-          <div class="c-clear-left">
-            <div class="tabs">
-              <div id="tab1" class="tab active" v-if="tabIndex == 0">
-                <div class="richTextContent" id="richtext" style="display: block">
-                  <span v-html="productdata.productRemark"></span>
-                </div>
+        <div class="c-clear-left">
+          <div class="tabs">
+         <div id="tab2" v-if="tabIndex == 1" class="tab active">
+              <div class="tab2-div"></div>
+              <div class="tab2-div2">
+                <img
+                  class="tab2-img"
+                  id="logo"
+                  src="https://trace.cciccloud.com/trace-backend/images/2021-11-17/910612857824215040.jpg"
+                  onclick="showImg(this)"
+                />
+                <span class="companyname tab2-span">{{ productdata.inspectionEnterprise }}</span>
+                <span v-html="productdata.enterpriseInfo" class="businessElectronicFile tab2-span2"> </span>
+                <div class="bot"></div>
               </div>
+              <div class="tab2-div3">
+                <span class="tab2-span3"> 资质信息</span>
+              </div>
+              <div
+                class="tab2-div4"
+                id="imgcontend"
+                v-html="productdata.qualificationInfo"
+                style="text-align: center"
+              ></div>
+            </div>
+            <!-- 流程列表 -->
+            <div id="tab3" v-if="tabIndex == 2" class="tab autoheigth active">
+              <ul class="tab3-ul" id="ullist">
+                <li style="width: 95%">
+                  <img
+                    v-if="isShow"
+                    src="@assets/img/dot2.jpg"
+                    style="position: absolute; left: 15px; margin-top: 14px; width: 21px; height: 21px"
+                    width="28px"
+                    height="28px"
+                  />
+                  <img
+                    v-else
+                    src="@assets/img/dot1.jpg"
+                    style="position: absolute; left: 15px; margin-top: 14px; width: 21px; height: 21px"
+                    width="28px"
+                    height="28px"
+                  />
+                  <div
+                    class="showIcons"
+                    style="padding: 14px; padding-left: 8px"
+                    butnum="0004351623_11284"
+                    compk="b7269300aad64660b6faae8aa2850f51"
+                    @click="onShow"
+                  >
+                    <span>委托方简介</span>
+                    <div style="float: right">
+                      <span
+                        class="Icons"
+                        style="color: #666; font-weight: bold; padding-right: 8px; font-size: 0.3733rem"
+                        >收起</span
+                      ><img
+                        class="showIcon"
+                        :class="isShow ? 'ishowIcons' : ''"
+                        src="@assets/img/data3.jpg"
+                        pk="ca772ae2058349e2be9537535b530aec"
+                      />
+                    </div>
+                  </div>
+                  <div style="border-bottom: 1px solid #bfbfbf; height: 1px; position: absolute; width: 85%"></div>
+                  <div
+                    style="display: black; margin: 0.1rem; border-radius: 10px; margin-top: 10px"
+                    class="showWrap"
+                    v-if="isShow"
+                  >
+                    <div
+                      style="
+                        height: 32px;
+                        border-radius: 10px 10px 0px 0px;
+                        background-color: #005bac;
+                        border: 1px solid #005bac;
+                      "
+                    >
+                      <img
+                        src="@assets/img/1.jpg"
+                        style="height: 100%; padding: 5px; padding-left: 13px; float: left"
+                      /><span
+                        style="
+                          display: block;
+                          float: left;
+                          color: white;
+                          font-weight: bold;
+                          line-height: 32px;
+                          padding-left: 12px;
+                          font-size: 0.32rem;
+                        "
+                        >{{ productdata.inspectionDate }} 记录</span
+                      >
+                    </div>
+                    <div
+                      style="
+                        border-radius: 0px 0px 10px 10px;
+                        border-bottom: 1px solid #bfbfbf;
+                        border-left: 1px solid #bfbfbf;
+                        border-right: 1px solid #bfbfbf;
+                        padding-top: 5px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                      "
+                    >
+                      <div class="showWrap-content" v-html="productdata.trustInfo"></div>
+                      <div style="margin-bottom: 10px"></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -111,7 +154,7 @@ export default {
   data() {
     return {
       list: [],
-      tabIndex: 0,
+      tabIndex: 1,
       productdata: null,
       headerfixed: false,
       sn: '',
@@ -127,9 +170,9 @@ export default {
   },
   created() {
     // if (this.$route.query && this.$route.query.sn) {
-    this.sn = this.$route.query.sn
-    this._getBaseUrl()
-    this._getProductQuery()
+      this.sn = this.$route.query.sn
+      this._getBaseUrl()
+      this._getProductQuery()
     // } else {
     //   this.$router.push('/wxm')
     // }
@@ -174,7 +217,7 @@ export default {
     },
     search() {
       this.$router.push({
-        path: '/enterprise',
+        path: '/authen',
         query: {
           sn: this.productdata.productNo,
           productName: this.productdata.productName,
@@ -278,7 +321,7 @@ export default {
 .n-name-content {
   font-size: 0.4rem;
   line-height: 0.64rem;
-  color: #43439b;
+  color: #000;
   font-weight: 600;
   padding-left: 0.064rem;
   word-wrap: break-word;
@@ -291,29 +334,20 @@ export default {
   display: table;
   padding: 0px;
   margin-left: 0px;
-  color: #43439b;
-  font-weight: 500 !important;
-  line-height: 0.6rem;
-  font-size: 0.38rem !important;
+  min-height: unset;
 }
 .indexItemContentThree {
   padding: 0 0.5067rem !important;
   min-height: unset !important;
   margin: 0.16rem 0 !important;
 }
-.songjian {
-  margin: 10px 0 10px 15px;
-  color: #43439b !important;
-  line-height: 0.8rem;
-  font-size: 0.38rem !important;
-}
 .indexItemTitle {
   width: 17% !important;
   display: table-cell !important;
   vertical-align: unset !important;
-  color: #43439b !important;
-  line-height: 0.6rem;
-  font-size: 0.38rem !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  font-size: 0.32rem !important;
 }
 .indexItemInput {
   font-size: 0.32rem !important;
@@ -338,7 +372,7 @@ export default {
   border: 0;
   border-bottom: 5px solid transparent;
   border-radius: 0;
-  width: 33.33%;
+  width: 50%;
   float: left;
 }
 .buttons-tab .button.active {
@@ -353,7 +387,7 @@ export default {
 }
 .liststyle {
   margin: 0px;
-  // margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .richTextContent {
@@ -398,58 +432,9 @@ export default {
   font-size: 0.4rem;
   color: white;
 }
-.content-box {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  .left {
-    width: 180px;
-    background-image: url(~@assets/img/WechatIMG52.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  .right {
-    position: relative;
-  }
-}
 .contentDivOne {
   background-color: white !important;
-  background-image: url(~@assets/img/c_bg.jpg);
-  background-size: 250px 250px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding-right: 10px;
-  // top: 65px !important;
-
-  .header-img {
-    display: flex;
-    padding: 30px 0 10px 0;
-    justify-content: center;
-    align-items: center;
-    .left {
-      width: 70%;
-      margin-right: 20px;
-    }
-    .right {
-      height: 60px;
-      width: 60px;
-    }
-  }
-  .indexBanner {
-    display: flex;
-    width: 100%;
-    height: 80px;
-    padding: 5px 10px;
-    .banner-content {
-      width: 25%;
-      img {
-        height: 70px;
-        margin-right: 5px;
-      }
-    }
-  }
+  top:60px!important;
 }
 .tab2-div2 img {
   max-width: 100%;

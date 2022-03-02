@@ -67,6 +67,12 @@ export const constantRouterMap1 = [
     meta: { title: '防伪查询', keepAlive: false }
   },
   {
+    path: '/enterprise',
+    name: 'enterprise',
+    component: () => import('@/views2/home/enterprise'),
+    meta: { title: '企业信息', keepAlive: false }
+  },
+  {
     path: '/wxm',
     name: 'wxm',
     component: () => import('@/views2/home/wxm'),

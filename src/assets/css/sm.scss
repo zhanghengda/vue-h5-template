@@ -293,7 +293,6 @@ a:active {
   bottom: 0;
   left: 0;
   background: #eee;
-  z-index: 2000;
 }
 .content {
   position: absolute;
@@ -995,6 +994,8 @@ a:active {
   height: 1.3333rem;
   padding: 0;
   table-layout: fixed;
+  z-index: 10;
+  background: #fff;
 }
 .bar-tab:before {
   content: '';
