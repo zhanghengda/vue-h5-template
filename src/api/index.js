@@ -4,8 +4,8 @@ const api = {
   UserName: '/user/name',
   baseUrl: '/api/config/img/baseUrl',
   baseConfig: '/api/config/baseConfig',
-  identify: '/api/product/identify',
-  productQuery: '/api/product/query',
+  identify: '/api/product_scan/identify',
+  productQuery: '/api/product_scan/query',
   consumerFeedback: '/api/consumerFeedback/submit'
 }
 
