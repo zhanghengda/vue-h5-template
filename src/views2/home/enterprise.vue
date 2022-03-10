@@ -1,17 +1,16 @@
 <template>
   <div class="page-group" v-if="productdata">
-          <!-- 标题栏 -->
-        <header class="bar bar-nav complaintHeader">
-          <button class="button button-link button-nav pull-left complaintHeaderIn">
-            <div>
-              <a href="#" onclick="javascript :history.back(-1);"
-                ><span class="icon icon-left complaints-a complaintA"></span>
-                <span class="complaints-span">返回</span></a
-              >
-            </div>
-          </button>
-          <h1 class="title complaints-h1">企业信息</h1>
-        </header>
+    <!-- 标题栏 -->
+    <header class="bar bar-nav complaintHeader">
+      <button class="button button-link button-nav pull-left complaintHeaderIn">
+        <div>
+          <a href="#" @click="gohome"
+            ><span class="icon icon-left complaints-a complaintA"></span> <span class="complaints-span">返回</span></a
+          >
+        </div>
+      </button>
+      <h1 class="title complaints-h1">企业信息</h1>
+    </header>
     <!-- 你的html代码 -->
     <div class="page page-current" id="xindex">
       <div class="content contentDivOne native-scroll" @scroll="scrollEvent">
@@ -31,7 +30,7 @@
 
         <div class="c-clear-left">
           <div class="tabs">
-         <div id="tab2" v-if="tabIndex == 1" class="tab active">
+            <div id="tab2" v-if="tabIndex == 1" class="tab active">
               <div class="tab2-div"></div>
               <div class="tab2-div2">
                 <img
@@ -170,9 +169,9 @@ export default {
   },
   created() {
     // if (this.$route.query && this.$route.query.sn) {
-      this.sn = this.$route.query.sn
-      this._getBaseUrl()
-      this._getProductQuery()
+    this.sn = this.$route.query.sn
+    this._getBaseUrl()
+    this._getProductQuery()
     // } else {
     //   this.$router.push('/wxm')
     // }
@@ -214,6 +213,9 @@ export default {
     },
     feedback() {
       this.$router.push({ path: '/complaints', query: { sn: this.productdata.productNo } })
+    },
+    gohome() {
+      this.$router.go(-1)
     },
     search() {
       this.$router.push({
@@ -434,7 +436,7 @@ export default {
 }
 .contentDivOne {
   background-color: white !important;
-  top:60px!important;
+  top: 60px !important;
 }
 .tab2-div2 img {
   max-width: 100%;

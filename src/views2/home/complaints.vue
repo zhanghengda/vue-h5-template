@@ -6,7 +6,7 @@
         <header class="bar bar-nav complaintHeader">
           <button class="button button-link button-nav pull-left complaintHeaderIn">
             <div>
-              <a href="#" onclick="javascript :history.back(-1);"
+              <a href="#" @click="gohome"
                 ><span class="icon icon-left complaints-a complaintA"></span>
                 <span class="complaints-span">返回</span></a
               >
@@ -143,6 +143,9 @@ export default {
     isPhoneNo(phone) {
       var pattern = /^1[34578]\d{9}$/
       return pattern.test(phone)
+    },
+    gohome() {
+      this.$router.go(-1)
     },
     // 验证邮箱
     isEmail(email) {
