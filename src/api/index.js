@@ -6,7 +6,7 @@ const api = {
   baseConfig: '/api/config/baseConfig',
   identify: '/api/product_scan/identify',
   productQuery: '/api/product_scan/query',
-  consumerFeedback: '/api/consumerFeedback/submit'
+  consumerFeedback: '/api/consumerFeedbackScan/submit'
 }
 
 export default api

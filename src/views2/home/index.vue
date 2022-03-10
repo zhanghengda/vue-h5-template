@@ -54,7 +54,7 @@
                   <div class="liststyle-div2">
                     <div class="item-title label indexItemTitle">生产编码 :&nbsp;</div>
                     <div class="item-input indexItemInput">
-                      <p class="Infor liststyle"></p>
+                      <p class="Infor liststyle">{{ productdata.serialNo }}</p>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                   <div class="liststyle-div2">
                     <div class="item-title label indexItemTitle">外观状态描述 :&nbsp;</div>
                     <div class="item-input indexItemInput">
-                      <p class="productArt liststyle"></p>
+                      <p class="productArt liststyle">{{ productdata.remarkTitle }}</p>
                     </div>
                   </div>
                 </div>
@@ -446,6 +446,7 @@ export default {
       width: 25%;
       img {
         height: 70px;
+        width: 70px;
         margin-right: 5px;
       }
     }
