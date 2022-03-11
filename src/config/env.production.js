@@ -1,6 +1,6 @@
 // 正式
 module.exports = {
-  title: '产品追溯信息',
+  title: '产品鉴定信息',
   baseUrl: 'https://qqqic.com', // 正式项目地址
   baseApi: 'https://qqqic.com', // 正式api请求地址
   APPID: 'xxx',

@@ -15,6 +15,8 @@
           >
         </p>
       </nav>
+      <img class="bottom-biao" src="@assets/img/d_Logo.png" />
+
       <div class="content-box">
         <div class="left"></div>
         <div class="content contentDivOne native-scroll right" @scroll="scrollEvent">
@@ -85,11 +87,24 @@
           <div class="songjian">送鉴样品部分实物图</div>
 
           <!-- Slider -->
-          <div class="indexBanner" v-if="productdata">
+          <!-- <div class="indexBanner" v-if="productdata">
             <div class="banner-content" v-for="(image, index) in productdata.bannerImg.split(',')" :key="index">
               <img v-lazy="baseUrl + image" />
             </div>
+          </div> -->
+          <div class="indexBanner">
+            <van-swipe indicator-color="#ff6600" v-if="productdata" height="10" class="my-swipe" :autoplay="3000">
+              <van-swipe-item
+                class="van-swipe-item"
+                v-for="(image, index) in productdata.bannerImg.split(',')"
+                :key="index"
+              >
+                <img v-lazy="baseUrl + image" />
+              </van-swipe-item>
+            </van-swipe>
           </div>
+          <div class="songjian"></div>
+
           <div class="c-clear-left">
             <div class="tabs">
               <div id="tab1" class="tab active" v-if="tabIndex == 0">
@@ -155,7 +170,7 @@ export default {
       getProductQuery(param).then(res => {
         if (res.code == 0 && res.data) {
           this.productdata = res.data
-          document.title = this.productdata.productName + '追溯信息'
+          document.title = this.productdata.productName + '鉴定信息'
         } else {
           this.$router.push({
             path: '/wxm',
@@ -216,7 +231,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .my-swipe {
-  height: 5.95rem;
+  height: 4.95rem;
 }
 /deep/.van-swipe__indicator {
   width: 0.2667rem;
@@ -228,7 +243,7 @@ export default {
   line-height: 150px;
   text-align: center;
   img {
-    height: 5.95rem;
+    height: 4.95rem;
   }
 }
 .tit {
@@ -398,6 +413,13 @@ export default {
   font-size: 0.4rem;
   color: white;
 }
+.bottom-biao {
+  position: absolute;
+  bottom: 70px;
+  right: 10px;
+  z-index: 10;
+  height: 50px;
+}
 .content-box {
   display: flex;
   justify-content: flex-start;
@@ -417,15 +439,15 @@ export default {
 .contentDivOne {
   background-color: white !important;
   background-image: url(~@assets/img/c_bg.jpg);
-  background-size: 250px 250px;
-  background-position: center center;
+  background-size: 300px 300px;
+  background-position: 30% 45%;
   background-repeat: no-repeat;
-  padding-right: 10px;
+
   // top: 65px !important;
 
   .header-img {
     display: flex;
-    padding: 30px 0 10px 0;
+    padding: 20px 0 0px 0;
     justify-content: center;
     align-items: center;
     .left {
@@ -437,19 +459,16 @@ export default {
       width: 60px;
     }
   }
+  .c-clear-left {
+    margin-top: 60px;
+  }
   .indexBanner {
     display: flex;
     width: 100%;
-    height: 80px;
-    padding: 5px 10px;
-    .banner-content {
-      width: 25%;
-      img {
-        height: 70px;
-        width: 70px;
-        margin-right: 5px;
-      }
-    }
+    margin: 0.4rem 0.2rem 0.2rem 0.2rem;
+    padding-top: 0.4rem;
+    padding-right: 0.4rem;
+    padding-left: 0.0rem;
   }
 }
 .tab2-div2 img {

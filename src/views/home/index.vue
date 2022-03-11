@@ -365,7 +365,7 @@ export default {
       getProductQuery(param).then(res => {
         if (res.code == 0 && res.data) {
           this.productdata = res.data
-          document.title = this.productdata.productName + '追溯信息'
+          document.title = this.productdata.productName + '鉴定信息'
         } else {
           this.$router.push({
             path: '/wxm',

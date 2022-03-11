@@ -15,30 +15,25 @@
     <div class="page page-current" id="xindex">
       <div class="content contentDivOne native-scroll" @scroll="scrollEvent">
         <!-- 标签页 -->
-        <div class="buttons-tab fixed-tab" :class="headerfixed ? 'buttons-fixed' : ''" data-offset="65">
-          <a
-            @click="switchTab(1)"
-            class="tab-link button tabstyle"
-            :class="tabIndex == 1 ? 'active' : ''"
-            id="companyid"
-            >企业信息</a
-          >
-          <a @click="switchTab(2)" class="tab-link button tabstyle" :class="tabIndex == 2 ? 'active' : ''" id="origin"
-            >追溯信息</a
-          >
-        </div>
 
         <div class="c-clear-left">
           <div class="tabs">
             <div id="tab2" v-if="tabIndex == 1" class="tab active">
               <div class="tab2-div"></div>
               <div class="tab2-div2">
-                <img
+               <div class="header-imgbox">
+                  <img
+                  class="tab2-img1"
+                  id="logo"
+                  src="@assets/img/t_logo.jpg"
+                 
+                /> <img
                   class="tab2-img"
                   id="logo"
-                  src="https://trace.cciccloud.com/trace-backend/images/2021-11-17/910612857824215040.jpg"
-                  onclick="showImg(this)"
+                  src="@assets/img/bar_logo.jpg"
+                 
                 />
+               </div>
                 <span class="companyname tab2-span">{{ productdata.inspectionEnterprise }}</span>
                 <span v-html="productdata.enterpriseInfo" class="businessElectronicFile tab2-span2"> </span>
                 <div class="bot"></div>
@@ -438,13 +433,26 @@ export default {
   background-color: white !important;
   top: 60px !important;
 }
+  .header-imgbox
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tab2-img1
+    {
+      height: 50px;
+      width: 50px;
+      margin: 0 10px 0 15px;
+    }
+  }
 .tab2-div2 img {
   max-width: 100%;
 }
 .tab2-img {
   display: block;
-  margin: auto;
-  max-height: 90px;
+  margin: 0 auto 0 0;
+  max-height: 40px;
+
 }
 .tab2-div3 {
   height: 1.067rem;

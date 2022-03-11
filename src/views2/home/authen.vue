@@ -1,7 +1,7 @@
 <template>
   <div class="page page-current" id="page-1638439708413">
     <div class="content search-div" style="top: 1.5rem; top: 0.8rem; position: relative; z-index: 10">
-      <img class="authen-comp-logo" src="@assets/img/logo.jpg" />
+      <img class="authen-comp-logo" src="@assets/img/bar_logo.jpg" />
       <div class="authen-content-frame">
         <div class="auth-search-item">
           <input class="auth-search-txt" v-model="code" type="text" /><input
