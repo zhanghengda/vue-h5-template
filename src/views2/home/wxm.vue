@@ -2,17 +2,19 @@
   <div class="page page-current" id="xindex">
     <!-- 标题 -->
      <div class="header-imgbox">
-                  <img
+          <img
                   class="tab2-img1"
                   id="logo"
                   src="@assets/img/t_logo.jpg"
                  
-                /> <img
+                /> 
+                <img
                   class="tab2-img"
                   id="logo"
                   src="@assets/img/bar_logo.jpg"
                  
                 />
+               
                </div>
     <div class="content contentDivOne1 native-scroll">
       <div class="center">
@@ -62,7 +64,7 @@ export default {}
     {
       height: 50px;
       width: 50px;
-      margin: 0 10px 0 15px;
+      margin: 0 5px 0 15px;
     }
   }
   .tab2-div2 img {
@@ -70,7 +72,7 @@ export default {}
 }
 .tab2-img {
   display: block;
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 15px;
   max-height: 40px;
 
 }

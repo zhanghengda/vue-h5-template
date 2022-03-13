@@ -15,17 +15,15 @@
           >
         </p>
       </nav>
-      <img class="bottom-biao" src="@assets/img/d_Logo.png" />
 
       <div class="content-box">
         <div class="left"></div>
         <div class="content contentDivOne native-scroll right" @scroll="scrollEvent">
           <!-- 图片幻灯片 -->
           <div class="header-img">
-            <img class="left" src="@assets/img/bar_logo.jpg" />
-            <img class="right" src="@assets/img/t_logo.jpg" />
+            <img class="left" src="@assets/img/t_logo.jpg" />
+            <img class="right" src="@assets/img/bar_logo.jpg" />
           </div>
-
           <!-- 表单列表 -->
           <div class="list-block liststyle">
             <ul class="productdata">
@@ -51,10 +49,10 @@
                 </div>
               </li>
               <!-- Date -->
-              <li class="infor">
+              <li v-if="productdata&&productdata.serialNo " class="infor" >
                 <div class="item-content indexItemContentTwo">
                   <div class="liststyle-div2">
-                    <div class="item-title label indexItemTitle">生产编码 :&nbsp;</div>
+                    <div class="item-title label indexItemTitle">序列号 :&nbsp;</div>
                     <div class="item-input indexItemInput">
                       <p class="Infor liststyle">{{ productdata.serialNo }}</p>
                     </div>
@@ -84,16 +82,12 @@
             </ul>
           </div>
 
-          <div class="songjian">送鉴样品部分实物图</div>
+          <div class="songjian">送检样品部分实物图</div>
 
           <!-- Slider -->
-          <!-- <div class="indexBanner" v-if="productdata">
-            <div class="banner-content" v-for="(image, index) in productdata.bannerImg.split(',')" :key="index">
-              <img v-lazy="baseUrl + image" />
-            </div>
-          </div> -->
+
           <div class="indexBanner">
-            <van-swipe indicator-color="#ff6600" v-if="productdata" height="10" class="my-swipe" :autoplay="3000">
+            <van-swipe indicator-color="#ff6600" :width="370" v-if="productdata" height="10" class="my-swipe" :autoplay="2000">
               <van-swipe-item
                 class="van-swipe-item"
                 v-for="(image, index) in productdata.bannerImg.split(',')"
@@ -114,6 +108,8 @@
               </div>
             </div>
           </div>
+
+          <img class="bottom-biao" src="@assets/img/d_Logo.jpg" />
         </div>
       </div>
     </div>
@@ -231,7 +227,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .my-swipe {
-  height: 4.95rem;
+  height: 5.25rem;
+  width: 100%;
 }
 /deep/.van-swipe__indicator {
   width: 0.2667rem;
@@ -240,11 +237,20 @@ export default {
 .my-swipe .van-swipe-item {
   color: #fff;
   font-size: 20px;
-  line-height: 150px;
-  text-align: center;
+
   img {
-    height: 4.95rem;
+    text-align: center;
+    height: 5.95rem;
+    width: 5.95rem;
   }
+}
+
+.my-swipe .van-swipe-item {
+  color: #fff;
+  font-size: 20px;
+  height: 5.25rem;
+  text-align: center;
+  background-color: transparent;
 }
 .tit {
   height: 1.7333rem;
@@ -374,7 +380,7 @@ export default {
 .richTextContent {
   width: 100%;
   font-size: 0.32rem;
-  padding: 0 0.5rem;
+  padding: 0 0.2rem;
   p {
     margin-top: 5px;
     margin-right: 0;
@@ -414,14 +420,14 @@ export default {
   color: white;
 }
 .bottom-biao {
-  position: absolute;
-  bottom: 70px;
-  right: 10px;
-  z-index: 10;
   height: 50px;
+  float: right;
+  margin-left: auto;
+  margin-right: 20px;
 }
 .content-box {
   display: flex;
+  padding-bottom: 40px;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
@@ -442,33 +448,37 @@ export default {
   background-size: 300px 300px;
   background-position: 30% 45%;
   background-repeat: no-repeat;
-
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: left;
   // top: 65px !important;
 
   .header-img {
     display: flex;
-    padding: 20px 0 0px 0;
+    padding: 20px 0 10px 0;
     justify-content: center;
     align-items: center;
     .left {
-      width: 70%;
-      margin-right: 20px;
+      margin-right: 10px;
+       height: 60px;
+      width: 60px;
     }
     .right {
-      height: 60px;
-      width: 60px;
+         width: 70%;
     }
   }
   .c-clear-left {
-    margin-top: 60px;
+    margin-top: 30px;
   }
-  .indexBanner {
+  。 .indexBanner {
     display: flex;
     width: 100%;
-    margin: 0.4rem 0.2rem 0.2rem 0.2rem;
+    align-items: center;
+    justify-items: center;
+    margin: 0.4rem 0.0rem 0.2rem 0.0rem;
     padding-top: 0.4rem;
-    padding-right: 0.4rem;
-    padding-left: 0.0rem;
+    padding-left: 0rem;
   }
 }
 .tab2-div2 img {
