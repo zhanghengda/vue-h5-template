@@ -49,7 +49,7 @@
                 </div>
               </li>
               <!-- Date -->
-              <li v-if="productdata&&productdata.serialNo " class="infor" >
+              <li v-if="productdata && productdata.serialNo" class="infor">
                 <div class="item-content indexItemContentTwo">
                   <div class="liststyle-div2">
                     <div class="item-title label indexItemTitle">序列号 :&nbsp;</div>
@@ -87,7 +87,14 @@
           <!-- Slider -->
 
           <div class="indexBanner">
-            <van-swipe indicator-color="#ff6600" :width="370" v-if="productdata" height="10" class="my-swipe" :autoplay="2000">
+            <van-swipe
+              indicator-color="#ff6600"
+              :width="370"
+              v-if="productdata"
+              height="10"
+              class="my-swipe"
+              :autoplay="2000"
+            >
               <van-swipe-item
                 class="van-swipe-item"
                 v-for="(image, index) in productdata.bannerImg.split(',')"
@@ -97,7 +104,6 @@
               </van-swipe-item>
             </van-swipe>
           </div>
-          <div class="songjian"></div>
 
           <div class="c-clear-left">
             <div class="tabs">
@@ -229,28 +235,23 @@ export default {
 .my-swipe {
   height: 5.25rem;
   width: 100%;
+  margin: 1rem auto 0 auto;
 }
 /deep/.van-swipe__indicator {
   width: 0.2667rem;
   height: 0.2667rem;
-}
-.my-swipe .van-swipe-item {
-  color: #fff;
-  font-size: 20px;
-
-  img {
-    text-align: center;
-    height: 5.95rem;
-    width: 5.95rem;
-  }
 }
 
 .my-swipe .van-swipe-item {
   color: #fff;
   font-size: 20px;
   height: 5.25rem;
-  text-align: center;
   background-color: transparent;
+    img {
+    height: 5.25rem;
+    width: 5.25rem;
+    margin-left: 1.6rem;
+  }
 }
 .tit {
   height: 1.7333rem;
@@ -327,6 +328,7 @@ export default {
   color: #43439b !important;
   line-height: 0.8rem;
   font-size: 0.38rem !important;
+  z-index: 1;
 }
 .indexItemTitle {
   width: 17% !important;
@@ -443,16 +445,10 @@ export default {
   }
 }
 .contentDivOne {
-  background-color: white !important;
-  background-image: url(~@assets/img/c_bg.jpg);
-  background-size: 300px 300px;
-  background-position: 30% 45%;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: left;
-  // top: 65px !important;
 
   .header-img {
     display: flex;
@@ -461,22 +457,24 @@ export default {
     align-items: center;
     .left {
       margin-right: 10px;
-       height: 60px;
+      height: 60px;
       width: 60px;
     }
     .right {
-         width: 70%;
+      width: 70%;
     }
   }
   .c-clear-left {
-    margin-top: 30px;
+    margin-top: -0.5rem;
   }
-  。 .indexBanner {
-    display: flex;
+  .indexBanner {
+    background-image: url(~@assets/img/c_bg.jpg);
+    background-size: 7rem 7rem;
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 100%;
-    align-items: center;
-    justify-items: center;
-    margin: 0.4rem 0.0rem 0.2rem 0.0rem;
+    height: 8rem;
+    margin: -1rem 0rem 0.2rem 0rem;
     padding-top: 0.4rem;
     padding-left: 0rem;
   }
