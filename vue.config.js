@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 const resolve = dir => path.join(__dirname, dir)
 // page title
-const name = defaultSettings.title || '产品追溯信息'
+const name = defaultSettings.title || '产品'
 // 生产环境，测试和正式
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 // externals
@@ -46,9 +46,8 @@ module.exports = {
   devServer: {
     port: 9020, // 端口
     // host: 'localhost',
-    host: '192.168.1.9',
+    host: '192.168.50.103',
 
-    
     open: false, // 启动后打开浏览器
     overlay: {
       //  当出现编译器错误或警告时，在浏览器中显示全屏覆盖层
@@ -57,12 +56,12 @@ module.exports = {
     },
     proxy: {
       //配置跨域
-      '/api': {
-        target: 'https://qqqic.com',
+      '/gs': {
+        target: 'http://47.254.23.164:8300/gs',
         // ws:true,
         changOrigin: true,
         pathRewrite: {
-          '^/api': '/'
+          '^/gs': '/'
         }
       }
     }

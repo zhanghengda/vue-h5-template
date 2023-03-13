@@ -5,7 +5,8 @@ import { Toast } from 'vant'
 import { baseApi } from '@/config'
 // create an axios instance
 const service = axios.create({
-  baseURL: location.hostname === 'localhost' ? baseApi : `https://${location.hostname}`, // url = base api url + request url
+  // baseURL: '',
+  baseURL: location.hostname === 'localhost' ? '' : `https://${location.hostname}`, // url = base api url + request url, // url = base api url + request url
   withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })

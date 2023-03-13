@@ -9,39 +9,63 @@ export const constantRouterMap = [
     redirect: '/home',
     meta: {
       title: '首页',
-      keepAlive: false
+      keepAlive: true
     }
   },
   {
     path: '/home',
     name: 'home',
     component: () => import('@/views/home/index'),
-    meta: { title: '首页', keepAlive: false }
+    meta: { title: '首页', keepAlive: true }
   },
   {
-    path: '/complaints',
-    name: 'complaints',
-    component: () => import('@/views/home/complaints'),
-    meta: { title: '消息反馈', keepAlive: false }
+    path: '/detail',
+    name: 'detail',
+    component: () => import('@/views/home/gamedetail'),
+    meta: { title: '详情', keepAlive: true }
   },
   {
-    path: '/authen',
-    name: 'authen',
-    component: () => import('@/views/home/authen'),
-    meta: { title: '防伪查询', keepAlive: false }
+    path: '/play',
+    name: 'play',
+    component: () => import('@/views/home/playGame'),
+    meta: { title: '游戏', keepAlive: true }
   },
   {
-    path: '/wxm',
-    name: 'wxm',
-    component: () => import('@/views/home/wxm'),
-    meta: { title: '产品追溯信息', keepAlive: false }
+    path: '/classify',
+    name: 'classify',
+    component: () => import('@/views/home/classify'),
+    meta: { title: '分类', keepAlive: false }
+  },
+  {
+    path: '/classifyList',
+    name: 'classifyList',
+    component: () => import('@/views/home/classifyList'),
+    meta: { title: 'classifyList', keepAlive: false }
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/home/about'),
+    meta: { title: '关于', keepAlive: true }
+  },
+  {
+    path: '/service',
+    name: 'service',
+    component: () => import('@/views/home/service'),
+    meta: { title: 'service', keepAlive: true }
+  },
+  {
+    path: '/policy',
+    name: 'policy',
+    component: () => import('@/views/home/policy'),
+    meta: { title: 'policy', keepAlive: true }
   }
 ]
 
 export const constantRouterMap1 = [
   {
     path: '/',
-    component: () => import('@/views2/layouts/index'),
+    component: () => import('@/views/layouts/index'),
     redirect: '/home',
     meta: {
       title: '首页',
@@ -51,31 +75,7 @@ export const constantRouterMap1 = [
   {
     path: '/home',
     name: 'home',
-    component: () => import('@/views2/home/index'),
+    component: () => import('@/views/home/index'),
     meta: { title: '首页', keepAlive: false }
-  },
-  {
-    path: '/complaints',
-    name: 'complaints',
-    component: () => import('@/views2/home/complaints'),
-    meta: { title: '消息反馈', keepAlive: false }
-  },
-  {
-    path: '/authen',
-    name: 'authen',
-    component: () => import('@/views2/home/authen'),
-    meta: { title: '防伪查询', keepAlive: false }
-  },
-  {
-    path: '/enterprise',
-    name: 'enterprise',
-    component: () => import('@/views2/home/enterprise'),
-    meta: { title: '企业信息', keepAlive: false }
-  },
-  {
-    path: '/wxm',
-    name: 'wxm',
-    component: () => import('@/views2/home/wxm'),
-    meta: { title: '产品追溯信息', keepAlive: false }
   }
 ]

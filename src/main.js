@@ -9,6 +9,8 @@ import router from './router'
 import store from './store'
 import { Lazyload, Swipe, SwipeItem } from 'vant'
 // 设置 js中可以访问 $cdn
+// import Vconsole from 'vconsole'
+
 import { $cdn } from '@/config'
 Vue.prototype.$cdn = $cdn
 Vue.use(Swipe)
@@ -20,7 +22,8 @@ import '@/plugins/vant'
 import '@/assets/css/index.scss'
 // 移动端适配
 import 'lib-flexible/flexible.js'
-
+// const vConsole = new Vconsole()
+// Vue.use(vConsole)
 // filters
 import './filters'
 Vue.config.productionTip = false

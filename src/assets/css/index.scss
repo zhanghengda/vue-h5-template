@@ -1,4 +1,754 @@
-@import './sm.scss';
+@import './reset.scss';
 @import './variables.scss';
 @import './complaints.scss';
 @import './authen-new.scss';
+
+.page-group {
+  height: 100%;
+  overflow: auto;
+
+  .bottom-nav {
+    position: absolute;
+    bottom: 60px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    .sc-18mcksl-1 {
+      height: 23px;
+    }
+
+    .name {
+      font-size: 14px;
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
+  .sc-etrfs6-3 {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .leEuAa {
+      color: #ffffff;
+      text-align: center;
+      text-decoration: underline;
+      font-size: inherit;
+      line-height: inherit;
+      padding: 6px;
+      white-space: pre;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+  }
+  .jJDKTa {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100001;
+    top: 16px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    width: 94px;
+    height: 94px;
+    flex-direction: column;
+    --left: 50%;
+    left: var(--left);
+    transform: translate(var(--offset), 0);
+    --offset: -157px;
+  }
+
+  .jJDKTa1 {
+    display: flex;
+    align-items: center;
+    top: 10px;
+    position: fixed;
+    justify-content: space-evenly;
+    z-index: 100001;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 0 16px 16px 0;
+    height: 44px;
+    transform: 0.5s all;
+    left: 0;
+  }
+  .jJDKTa2 {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100001;
+    top: 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 6px 32px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    width: 94px;
+    height: 94px;
+    flex-direction: column;
+    left: 20px;
+  }
+  .bubVge {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #f0f5fc;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40px;
+    border-radius: 0px 0px 16px 16px;
+    overflow: hidden;
+  }
+
+  .bubVge1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40px;
+    border-radius: 0px 0px 16px 16px;
+  }
+
+  .palygame {
+    border-radius: 8px;
+    margin-top: 158px;
+    overflow: hidden;
+    .play-box {
+      display: flex;
+      justify-content: center;
+      border-radius: 8px;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0.8;
+      cursor: pointer;
+      position: relative;
+      span {
+        font-size: 20px;
+        margin-top: 10px;
+        color: #fff;
+        font-weight: bold;
+      }
+      .meng {
+        height: 80vw;
+        width: 80vw;
+        max-width: 310px;
+        max-height: 310px;
+        position: absolute;
+        background: #000;
+        z-index: 1;
+        border-radius: 8px;
+        opacity: 0.2;
+        top: 0;
+        margin: 0 auto;
+        left: 0;
+        cursor: pointer;
+        right: 0;
+        bottom: 0;
+      }
+      .top {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        z-index: 12;
+        cursor: pointer;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .play-icon {
+        height: 80vw;
+        width: 80vw;
+        max-width: 310px;
+        border-radius: 8px;
+        max-height: 310px;
+      }
+      .play-img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  .nav-img {
+    cursor: pointer;
+    height: 20px;
+  }
+
+  .back {
+    height: 16px;
+  }
+  .back1 {
+    height: 16px;
+    transform: rotate(-180deg);
+  }
+  .jZlJdu {
+    width: 60px;
+    height: 28px;
+    margin: 15px auto 11px;
+  }
+  .page-current {
+    .jiSkSr,
+    .jiSkSr1 {
+      display: grid;
+      position: relative;
+      grid-template-rows: repeat(auto-fill, 94px);
+      grid-gap: 16px;
+      grid-auto-flow: dense;
+      justify-content: center;
+      margin: 16px auto 0px;
+      padding: 0px;
+      padding-bottom: 100px;
+      list-style-type: none;
+      --gridTemplateColumns: 3;
+      grid-template-columns: repeat(var(--gridTemplateColumns), 94px);
+      a {
+        text-decoration: none;
+      }
+      .global-cq {
+        // container-type: inline-size;
+        // container-name: tilecq;
+      }
+      .dgMzoz {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
+        user-select: none;
+      }
+      .dgMzoz:hover::after {
+        background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+      }
+      .jcoQuw {
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+        border-radius: 16px;
+        position: relative;
+      }
+
+      .jcoQuw :hover {
+        // transform: translateY(-4px);
+        transition: box-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
+      }
+
+      .jcoQuw:hover::after {
+        opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 12px 0px;
+      }
+
+      .jQcWfv {
+        display: block;
+        height: 100%;
+        width: 100%;
+        min-width: 2.506rem;
+        min-height: 2.506rem;
+        border-radius: inherit;
+      }
+
+      .ibRKmB {
+        position: absolute;
+        right: 0px;
+        bottom: 2px;
+        left: 2px;
+        padding: 6px;
+        color: rgb(255, 255, 255);
+        z-index: 6;
+        text-align: center;
+        font: 700 var(--tileFontSize, 12px) / 1.3 'Proxima Nova', sans-serif;
+        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s,
+          opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s;
+        transform: translate(0px, 8px);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .dgMzoz:hover .sc-963fcq-0 {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+    }
+
+    .jiSkSr::before {
+      content: '';
+      display: block;
+    }
+
+    .dpZqXq {
+      display: flex;
+      grid-template-rows: repeat(auto-fill, 94px);
+      grid-gap: 16px;
+      flex-wrap: wrap;
+      grid-auto-flow: dense;
+      justify-content: flex-start;
+      margin: 16px auto 0px;
+      padding: 0 20px;
+      list-style-type: none;
+      .dgMzoz {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
+        user-select: none;
+      }
+      .dgMzoz:hover::after {
+        background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+      }
+      .jcoQuw {
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+        border-radius: 16px;
+        position: relative;
+      }
+
+      .jcoQuw :hover {
+        // transform: translateY(-4px);
+        transition: box-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
+      }
+
+      .jcoQuw:hover::after {
+        opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 12px 0px;
+      }
+
+      .jQcWfv {
+        display: block;
+        min-width: 94px;
+        min-height: 94px;
+        max-width: 94px;
+        max-height: 94px;
+        border-radius: inherit;
+      }
+
+      .ibRKmB {
+        position: absolute;
+        right: 0px;
+        bottom: 2px;
+        left: 2px;
+        padding: 6px;
+        color: rgb(255, 255, 255);
+        z-index: 6;
+        text-align: center;
+        font: 700 var(--tileFontSize, 12px) / 1.3 'Proxima Nova', sans-serif;
+        transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s,
+          opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s;
+        transform: translate(0px, 8px);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .dgMzoz:hover .sc-963fcq-0 {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+      .cOJizt {
+        display: flex;
+        border-radius: 16px;
+        justify-content: center;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        padding: 10px 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
+        height: 94px;
+        box-sizing: border-box;
+        margin-left: calc(20px + 94px);
+        width: 100%;
+        align-items: flex-start;
+        font-size: 21px;
+      }
+
+      .iAEuVe {
+        display: flex;
+      }
+    }
+
+    .dpZqXq::before {
+      content: '';
+      display: block;
+    }
+  }
+}
+
+.page-detail {
+  height: 100%;
+  padding: 70px 30px 30px 30px;
+  box-sizing: border-box;
+  .detail-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .row {
+      display: flex;
+      margin: 5px 0;
+      .left {
+        .logo {
+          height: 94px;
+          width: 94px;
+          border-radius: 16px;
+        }
+      }
+
+      .right {
+        margin-left: 16px;
+        .name {
+          font-size: 22px;
+          color: #333333;
+          font-weight: bold;
+        }
+        .rate {
+          margin-top: 5px;
+        }
+      }
+      .detail {
+        color: #333333;
+        font-size: 14px;
+        min-height: 40px;
+        max-height: 80px;
+        overflow: auto;
+      }
+
+      .play-btn {
+        background-image: linear-gradient(90deg, #1d79f0, #55bcfc);
+        border-radius: 6px;
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .maylike {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+  }
+
+  .list {
+    height: 100%;
+
+    ::-webkit-scrollbar {
+      width: 5px; /* 纵向滚动条 宽度 */
+      height: 15px; /* 横向滚动条 高度 */
+      background: pink; /* 整体背景 */
+      border-radius: 2px; /* 整体 圆角 */
+    }
+
+    ::-webkit-scrollbar-button {
+      width: 30px; /* 横向滚动条 宽度 */
+      height: 20px; /* 纵向滚动条 高度 */
+      background: black;
+      border-radius: 10px;
+    }
+  }
+}
+.page-play {
+  height: 100%;
+  padding: 0px;
+}
+
+@media (min-width: 1871px) {
+  .bTPHwO {
+    --offset: -927px;
+    width: 204px;
+    flex-direction: row;
+  }
+
+  .fxNrdk {
+    --gridTemplateColumns: 17;
+    grid-template-areas:
+      '. . ip0 ip0 ip0 . . . . . . . . ip7 ip7 ip8 ip8'
+      '. . ip0 ip0 ip0 ip4 ip4 ip5 ip5 ip2 ip2 ip2 . ip7 ip7 ip8 ip8'
+      '. ip9 ip0 ip0 ip0 ip4 ip4 ip5 ip5 ip2 ip2 ip2 ip6 ip6 ip3 ip3 ip3'
+      'imp imp ip10 ip10 ip11 ip11 ip1 ip1 ip1 ip2 ip2 ip2 ip6 ip6 ip3 ip3 ip3'
+      'imp imp ip10 ip10 ip11 ip11 ip1 ip1 ip1 ip12 ip12 ip13 ip13 . ip3 ip3 ip3'
+      'ip14 ip15 ip15 ip16 ip16 . ip1 ip1 ip1 ip12 ip12 ip13 ip13 ip17 ip17 ip18 ip18'
+      '. ip15 ip15 ip16 ip16 . ip20 ip20 ip21 ip21 ip22 ip22 . ip17 ip17 ip18 ip18'
+      '. ip19 . . . . ip20 ip20 ip21 ip21 ip22 ip22 . . . . .'
+      '. . . . . . . . . . . . . . . . .'
+      'ip24 ip24 . . . . . . . . ip23 ip23 ip23 . . . .'
+      'ip24 ip24 . . . . ip26 ip26 . . ip23 ip23 ip23 . . . .'
+      '. . ip25 ip25 . . ip26 ip26 . . ip23 ip23 ip23 . . . .'
+      '. . ip25 ip25 . . . . . . . . . . . ip27 ip27'
+      '. . . . . . . . . . . . . . . ip27 ip27';
+  }
+}
+
+@media (min-width: 1541px) and (max-width: 1870.9px) {
+  .bTPHwO {
+    --offset: -762px;
+  }
+  .fxNrdk {
+    --gridTemplateColumns: 14;
+    grid-template-areas:
+      '. . ip0 ip0 ip0 imp imp . . . . . ip4 ip4'
+      '. . ip0 ip0 ip0 imp imp . ip3 ip3 ip3 . ip4 ip4'
+      'ip2 ip2 ip0 ip0 ip0 . . . ip3 ip3 ip3 . ip5 ip5'
+      'ip2 ip2 . . . ip1 ip1 ip1 ip3 ip3 ip3 . ip5 ip5'
+      'ip6 ip6 . ip7 ip7 ip1 ip1 ip1 ip8 ip8 ip9 ip9 . .'
+      'ip6 ip6 . ip7 ip7 ip1 ip1 ip1 ip8 ip8 ip9 ip9 . .'
+      '. . . . . . . . . . . . . .'
+      '. . . . . . . . ip11 ip11 ip11 . . .'
+      'ip12 ip12 . . . . . . ip11 ip11 ip11 . . .'
+      'ip12 ip12 . . . . . . ip11 ip11 ip11 . . .'
+      '. . ip13 ip13 . . . . . . . . . .'
+      '. . ip13 ip13 . . . . . . . . . .'
+      '. . . . . . ip14 ip14 . . . ip15 ip15 ip15'
+      'ip10 ip10 . . . . ip14 ip14 . . . ip15 ip15 ip15'
+      'ip10 ip10 . . . . . . . . . ip15 ip15 ip15';
+  }
+}
+
+@media (min-width: 1321px) and (max-width: 1540.9px) {
+  .bTPHwO {
+    --offset: -652px;
+  }
+  .fxNrdk {
+    --gridTemplateColumns: 11;
+    grid-template-areas:
+      '. . ip0 ip0 ip0 imp imp ip2 ip2 ip3 ip3'
+      'ip4 ip4 ip0 ip0 ip0 imp imp ip2 ip2 ip3 ip3'
+      'ip4 ip4 ip0 ip0 ip0 ip1 ip1 ip1 . ip5 ip5'
+      '. . . . . ip1 ip1 ip1 . ip5 ip5'
+      '. ip6 ip6 ip7 ip7 ip1 ip1 ip1 . ip8 ip8'
+      '. ip6 ip6 ip7 ip7 . . . . ip8 ip8'
+      '. . . . . . . . . . .'
+      '. . . . . . ip9 ip9 ip9 . .'
+      'ip10 ip10 . . . . ip9 ip9 ip9 . .'
+      'ip10 ip10 ip11 ip11 . . ip9 ip9 ip9 . .'
+      '. . ip11 ip11 . . . . . . .'
+      '. . . . . . . . . . .'
+      '. . . ip12 ip12 ip12 . . . . .'
+      '. . . ip12 ip12 ip12 . ip13 ip13 . .'
+      '. . . ip12 ip12 ip12 . ip13 ip13 . .'
+      '. . . . . . . . . . .'
+      '. ip14 ip14 . . . . . . ip15 ip15'
+      '. ip14 ip14 ip16 ip16 . . . . ip15 ip15'
+      '. . . ip16 ip16 . . . . . .';
+  }
+}
+@media (min-width: 1211px) and (max-width: 1320.9px) {
+  .bTPHwO {
+    --offset: -597px;
+  }
+  .fxNrdk {
+    --gridTemplateColumns: 9;
+    grid-template-areas:
+      '. . ip0 ip0 ip0 ip2 ip2 ip3 ip3'
+      'imp imp ip0 ip0 ip0 ip2 ip2 ip3 ip3'
+      'imp imp ip0 ip0 ip0 ip1 ip1 ip1 .'
+      '. . . ip5 ip5 ip1 ip1 ip1 .'
+      '. ip4 ip4 ip5 ip5 ip1 ip1 ip1 .'
+      '. ip4 ip4 ip7 ip7 . ip8 ip8 .'
+      '. ip6 ip6 ip7 ip7 . ip8 ip8 .'
+      '. ip6 ip6 . . . . . .'
+      '. . ip9 ip9 ip9 . ip12 ip12 .'
+      '. . ip9 ip9 ip9 . ip12 ip12 .'
+      '. . ip9 ip9 ip9 . . . .'
+      'ip13 ip13 . . . . . . .'
+      'ip13 ip13 . . . . ip10 ip10 ip10'
+      '. . . . . . ip10 ip10 ip10'
+      '. ip14 ip14 . . . ip10 ip10 ip10'
+      '. ip14 ip14 . . . . . .'
+      '. . . . . . . . .'
+      '. . . . ip11 ip11 ip11 . .'
+      '. . . . ip11 ip11 ip11 . .'
+      '. ip15 ip15 . ip11 ip11 ip11 . .'
+      '. ip15 ip15 ip16 ip16 . . . .'
+      '. . . ip16 ip16 . . . .'
+      '. . . . . . . ip17 ip17'
+      '. . . . . . . ip17 ip17';
+  }
+}
+@media (min-width: 991px) and (max-width: 1210.9px) {
+  .bTPHwO {
+    --offset: -432px;
+  }
+  .fxNrdk {
+    --gridTemplateColumns: 7;
+    grid-template-areas:
+      '. . ip0 ip0 ip0 ip1 ip1'
+      '. . ip0 ip0 ip0 ip1 ip1'
+      'ip2 ip2 ip0 ip0 ip0 . .'
+      'ip2 ip2 . ip3 ip3 . .'
+      '. . . ip3 ip3 imp imp'
+      '. . . . . imp imp'
+      'ip4 ip4 ip4 . . . .'
+      'ip4 ip4 ip4 . ip5 ip5 .'
+      'ip4 ip4 ip4 . ip5 ip5 .'
+      '. . ip6 ip6 . . .'
+      '. . ip6 ip6 . . .'
+      '. . . ip7 ip7 ip7 .'
+      '. . . ip7 ip7 ip7 .'
+      'ip8 ip8 . ip7 ip7 ip7 .'
+      'ip8 ip8 . . . ip9 ip9'
+      '. . . . . ip9 ip9'
+      'ip10 ip10 ip10 . ip12 ip12 .'
+      'ip10 ip10 ip10 . ip12 ip12 .'
+      'ip10 ip10 ip10 . . . .'
+      '. . ip13 ip13 . . .'
+      '. . ip13 ip13 ip11 ip11 ip11'
+      '. . . . ip11 ip11 ip11'
+      '. . . . ip11 ip11 ip11'
+      'ip14 ip14 . . . . .'
+      'ip14 ip14 . . . . .'
+      '. . ip15 ip15 . . .'
+      '. . ip15 ip15 . . .'
+      '. . . ip16 ip16 . .'
+      '. ip17 ip17 ip16 ip16 . .'
+      '. ip17 ip17 . . ip18 ip18'
+      '. . . . . ip18 ip18';
+  }
+}
+
+@media (min-width: 880px) and (max-width: 990.9px) {
+  .page-group {
+    .jJDKTa {
+      --offset: -322px;
+    }
+    .page-current {
+      .jiSkSr,
+      .jiSkSr1 {
+        --gridTemplateColumns: 6;
+        grid-template-areas:
+          '. ip0 ip0 . . .'
+          '. ip0 ip0 . ip1 ip1'
+          'ip2 ip2 . . ip1 ip1'
+          'ip2 ip2 . ip3 ip3 ip3'
+          'ip4 ip4 ip4 ip3 ip3 ip3'
+          'ip4 ip4 ip4 ip3 ip3 ip3'
+          'ip4 ip4 ip4 ip5 ip5 ip5'
+          '. . . ip5 ip5 ip5'
+          '. ip6 ip6 ip5 ip5 ip5'
+          '. ip6 ip6 . . .';
+      }
+      .ecpZbI {
+        grid-area: ip0 / ip0 / ip0 / ip0;
+      }
+
+      .fcNZuN {
+        grid-area: ip1 / ip1 / ip1 / ip1;
+      }
+    }
+  }
+}
+
+@media (min-width: 881px) {
+  .page-group {
+    .jJDKTa {
+      --offset: -432px;
+    }
+    .page-current {
+      .jiSkSr,
+      .jiSkSr1 {
+        --gridTemplateColumns: 8;
+        grid-template-areas:
+          '. ip0 ip0 . . . . .'
+          '. ip0 ip0 ip1 ip1 ip1 ip2 ip2'
+          'ip3 ip3 . ip1 ip1 ip1 ip2 ip2'
+          'ip3 ip3 . ip1 ip1 ip1 ip4 ip4'
+          'ip5 ip5 ip5 ip6 ip6 ip6 ip4 ip4'
+          'ip5 ip5 ip5 ip6 ip6 ip6 ip7 ip7'
+          'ip5 ip5 ip5 ip6 ip6 ip6 ip7 ip7'
+          'ip8 ip8 ip9 ip9 ip10 ip10 . .'
+          'ip8 ip8 ip9 ip9 ip10 ip10 . .';
+      }
+
+      .ecpZbI {
+        grid-area: ip0 / ip0 / ip0 / ip0;
+      }
+
+      .fcNZuN {
+        grid-area: ip1 / ip1 / ip1 / ip1;
+      }
+    }
+  }
+}
+@media (min-width: 661px) and (max-width: 880.9px) {
+  .page-group {
+    .jJDKTa {
+      --offset: -270px;
+    }
+
+    .page-current {
+      .jiSkSr,
+      .jiSkSr1 {
+        --gridTemplateColumns: 5;
+        grid-template-areas:
+          '. . . ip0 ip0'
+          '. . . ip0 ip0'
+          'ip1 ip1 . . .'
+          'ip1 ip1 . . .';
+      }
+      .ecpZbI {
+        grid-area: ip0 / ip0 / ip0 / ip0;
+      }
+
+      .fcNZuN {
+        grid-area: ip1 / ip1 / ip1 / ip1;
+      }
+    }
+  }
+}
+
+@media (min-width: 551px) and (max-width: 660.9px) {
+  .page-group {
+    .jJDKTa {
+      --offset: -157px;
+    }
+
+    .page-current {
+      .jiSkSr,
+      .jiSkSr1 {
+        grid-template-areas:
+          '. . .'
+          'ip0 ip0 .'
+          'ip0 ip0 .'
+          '. . .'
+          '. ip1 ip1'
+          '. ip1 ip1';
+      }
+
+      .ecpZbI {
+        grid-area: ip0 / ip0 / ip0 / ip0;
+      }
+
+      .fcNZuN {
+        grid-area: ip1 / ip1 / ip1 / ip1;
+      }
+    }
+  }
+}
+
+@media (min-width: 111px) and (max-width: 550.9px) {
+  .page-group {
+    .jJDKTa {
+      --offset: -157px;
+    }
+
+    .page-current {
+      .jiSkSr,
+      .jiSkSr1 {
+        grid-template-areas:
+          '. . .'
+          'ip0 ip0 .'
+          'ip0 ip0 .'
+          '. . .'
+          '. ip1 ip1'
+          '. ip1 ip1';
+      }
+
+      .ecpZbI {
+        grid-area: ip0 / ip0 / ip0 / ip0;
+      }
+
+      .fcNZuN {
+        grid-area: ip1 / ip1 / ip1 / ip1;
+      }
+    }
+  }
+}

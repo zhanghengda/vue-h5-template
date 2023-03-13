@@ -29,11 +29,39 @@ export function feedback(data) {
     hideloading: true
   })
 }
+
+export function getcatetorys(params) {
+  console.log(params)
+  return request({
+    url: api.getcatetorys,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
 // 查询产品信息 get 方法
 export function getProductQuery(params) {
   console.log(params)
   return request({
     url: api.productQuery,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+export function getlikelist(params) {
+  console.log(params)
+  return request({
+    url: api.getlikelist,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+export function getinfo(params) {
+  console.log(params)
+  return request({
+    url: api.getinfo,
     method: 'get',
     params,
     hideloading: true

@@ -3,10 +3,10 @@ const api = {
   UserInfo: '/user/userinfo',
   UserName: '/user/name',
   baseUrl: '/api/config/img/baseUrl',
-  baseConfig: '/api/config/baseConfig',
-  identify: '/api/product_scan/identify',
-  productQuery: '/api/product_scan/query',
-  consumerFeedback: '/api/consumerFeedbackScan/submit'
+  getlikelist: '/gs/main/game/getlikelist',
+  getinfo: '/gs/main/game/getinfo',
+  productQuery: '/gs/main/game/getalllist',
+  getcatetorys: '/gs/main/game/getcatetorys'
 }
 
 export default api

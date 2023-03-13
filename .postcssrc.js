@@ -8,7 +8,6 @@ module.exports = {
       rootValue: 37.5,
       propList: ['*']
       //selectorBlackList: ['van-']
-    },
-   
+    }
   }
 }
