@@ -132,7 +132,7 @@ export default {
       let _this = this
       let param = {
         pageNum: this.pageNum,
-        pageSize: 20,
+        pageSize: 10,
         categoryId: -1
       }
       getProductQuery(param).then(res => {
