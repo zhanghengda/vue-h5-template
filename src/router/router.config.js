@@ -22,19 +22,25 @@ export const constantRouterMap = [
     path: '/detail',
     name: 'detail',
     component: () => import('@/views/home/gamedetail'),
-    meta: { title: '详情', keepAlive: true }
+    meta: { title: '详情', keepAlive: false }
   },
   {
     path: '/play',
     name: 'play',
     component: () => import('@/views/home/playGame'),
-    meta: { title: '游戏', keepAlive: true }
+    meta: { title: '游戏', keepAlive: false }
   },
   {
     path: '/classify',
     name: 'classify',
     component: () => import('@/views/home/classify'),
     meta: { title: '分类', keepAlive: false }
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: () => import('@/views/home/blogdetail'),
+    meta: { title: '文章详情', keepAlive: false }
   },
   {
     path: '/classifyList',

@@ -6,13 +6,11 @@
   overflow: auto;
 
   .bottom-nav {
-    position: absolute;
-    bottom: 60px;
     z-index: 2;
     width: 100%;
     display: flex;
     justify-content: center;
-
+    margin-bottom: 20px;
     align-items: center;
     .sc-18mcksl-1 {
       height: 23px;
@@ -25,12 +23,10 @@
     }
   }
   .sc-etrfs6-3 {
-    position: absolute;
-    bottom: 20px;
-    z-index: 2;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 
     .leEuAa {
       color: #ffffff;
@@ -201,7 +197,7 @@
       justify-content: center;
       margin: 16px auto 0px;
       padding: 0px;
-      padding-bottom: 100px;
+      padding-bottom: 30px;
       list-style-type: none;
       --gridTemplateColumns: 3;
       grid-template-columns: repeat(var(--gridTemplateColumns), 94px);
@@ -215,6 +211,34 @@
       .dgMzoz {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 12px 0px;
         user-select: none;
+        position: relative;
+      }
+
+      .hot {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: #ff7432;
+        height: 20px;
+        width: 38px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        border-radius: 0 12px 0 12px;
+      }
+      .new {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: #ff4932;
+        height: 20px;
+        width: 38px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        border-radius: 0 12px 0 12px;
       }
       .dgMzoz:hover::after {
         background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3) 100%);
@@ -298,6 +322,15 @@
         position: relative;
       }
 
+      .sc-1ercfrx-4 {
+        font-family: Torus, sans-serif;
+        font-weight: 700;
+        color: #002b50;
+      }
+      .sc-1ercfrx-6 {
+        color: #5d6b84;
+        font-size: 12px;
+      }
       .jcoQuw :hover {
         // transform: translateY(-4px);
         transition: box-shadow 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -369,7 +402,7 @@
 
 .page-detail {
   height: 100%;
-  padding: 70px 30px 30px 30px;
+  padding: 20px 30px 30px 30px;
   box-sizing: border-box;
   .detail-box {
     display: flex;
@@ -379,6 +412,10 @@
       display: flex;
       margin: 5px 0;
       .left {
+        height: 94px;
+        border-radius: 16px;
+        width: 94px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0 0.16rem 0.32rem 0;
         .logo {
           height: 94px;
           width: 94px;
@@ -420,7 +457,7 @@
   }
 
   .maylike {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 18px;
     color: #333333;
     font-weight: bold;
@@ -708,6 +745,12 @@
           'ip0 ip0 .'
           '. . .'
           '. ip1 ip1'
+          '. ip1 ip1'
+          '. . .'
+          'ip0 ip0 .'
+          'ip0 ip0 .'
+          '. . .'
+          '. ip1 ip1'
           '. ip1 ip1';
       }
 
@@ -729,8 +772,7 @@
     }
 
     .page-current {
-      .jiSkSr,
-      .jiSkSr1 {
+      .jiSkSr {
         grid-template-areas:
           '. . .'
           'ip0 ip0 .'
@@ -739,7 +781,12 @@
           '. ip1 ip1'
           '. ip1 ip1';
       }
-
+      .jiSkSr1 {
+        grid-template-areas:
+          '. . .'
+          'ip0 ip0 .'
+          'ip0 ip0 .';
+      }
       .ecpZbI {
         grid-area: ip0 / ip0 / ip0 / ip0;
       }

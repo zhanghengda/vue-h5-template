@@ -4,15 +4,7 @@
     <div class="page page-current">
       <div style="display: contents">
         <nav mode="pill" class="sc-15orno7-0 jJDKTa1">
-          <div class="sc-jaa1t8-0 jJDKTa1" :style="'width:' + (zhankai ? '64px' : '34px')">
-            <img
-              src="@assets/img/back.png"
-              v-if="zhankai"
-              @click="openmenu"
-              alt="home"
-              decoding="async"
-              class="nav-img back"
-            />
+          <div class="sc-jaa1t8-0 jJDKTa1" :style="'width:' + (zhankai ? '30px' : '30px')">
             <img
               v-if="!zhankai"
               src="@assets/img/back.png"
@@ -75,18 +67,28 @@
           </a>
         </div>
       </div>
+
+      <p class="maylike">Game News</p>
+
+      <div class="article-list">
+        <div class="row" v-for="(item, index) in bloglist" @click="tonews(item)">
+          <img v-if="item.imgUrl" :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
+          <p class="title">{{ item.title }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { getProductQuery, getlikelist, getinfo, getBaseUrl } from '@api/user'
+import { getProductQuery, gettoplist, getlikelist, getinfo, getBaseUrl } from '@api/user'
 import { baseUrl } from '@/config'
 
 export default {
   data() {
     return {
       list: [],
+      bloglist: [],
       tabIndex: 0,
       loading: true,
       zhankai: true,
@@ -103,7 +105,7 @@ export default {
 
   computed: {
     baseUrl() {
-      return baseUrl
+      return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
   created() {
@@ -112,6 +114,7 @@ export default {
     }
     this._getinfo()
     this._getProductQuery()
+    this._getblogQuery()
   },
   mounted() {},
   methods: {
@@ -124,6 +127,14 @@ export default {
     },
     openmenu() {
       this.zhankai = !this.zhankai
+    },
+    tonews(item) {
+      this.$router.push({
+        path: '/news',
+        query: {
+          id: item.id
+        }
+      })
     },
     toplay() {
       if (this.productdata) {
@@ -196,8 +207,29 @@ export default {
               this.finished = true
             }
           }, 1000)
+        } else {
+        }
+      })
+    },
+    _getblogQuery() {
+      let param = {
+        id: this.$route.query.id
+      }
+      gettoplist(param).then(res => {
+        if (res.code == 0 && res.data) {
+          this.bloglist = res.data
+          if (this.bloglist.length < res.data) {
+            this.bloglist = [...this.bloglist, res.data]
+          }
+          setTimeout(() => {
+            // 加载状态结束
+            this.loading = false
 
-          console.log('productdata', this.productdata)
+            // 数据全部加载完成
+            if (this.bloglist.length >= res.data) {
+              this.finished = true
+            }
+          }, 1000)
         } else {
         }
       })
@@ -205,4 +237,40 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.jiSkSr1 {
+  padding-bottom: 0px !important;
+}
+
+.article-list {
+  .row {
+    display: flex;
+    margin: 10px 0;
+    justify-content: flex-start;
+    cursor: pointer;
+    .logo {
+      height: 80px;
+      width: 100px;
+      max-width: 100px;
+      max-height: 80px;
+      min-width: 100px;
+      margin-right: 10px;
+    }
+
+    .title {
+      line-height: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 80px;
+      display: -webkit-box;
+      word-wrap: break-word;
+      word-break: break-all;
+      white-space: pre-wrap;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+</style>

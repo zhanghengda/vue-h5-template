@@ -46,7 +46,8 @@ code,
 kbd,
 samp {
   line-height: 1.5;
-  font-family: tahoma, arial, 'Hiragino Sans GB', simsun, sans-serif;
+
+  font-family: Proxima Nova, Open Sans, Gill Sans MT, Gill Sans, Arial, sans-serif, Torus, sans-serif;
 }
 
 h1,
@@ -71,6 +72,9 @@ h4,
 h5,
 h6 {
   font-family: tahoma, arial, 'Hiragino Sans GB', '微软雅黑', simsun, sans-serif;
+
+  --fontProximaNova: Proxima Nova, Open Sans, Gill Sans MT, Gill Sans, Arial, sans-serif;
+  --fontTorus: Torus, sans-serif;
 }
 
 h1,

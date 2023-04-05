@@ -25,7 +25,7 @@
             <div class="sc-1ercfrx-3 iAEuVe">
               <h1 class="sc-1ercfrx-4 kiEtEc">{{ $route.query.name }}</h1>
             </div>
-            <span class="sc-1ercfrx-6 qcNIQ">by Blumgi</span>
+            <!-- <span class="sc-1ercfrx-6 qcNIQ">by Blumgi</span> -->
           </div>
         </header>
         <a
@@ -72,7 +72,7 @@ export default {
 
   computed: {
     baseUrl() {
-      return baseUrl
+      return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
   created() {

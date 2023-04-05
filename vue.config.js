@@ -100,7 +100,7 @@ module.exports = {
         new CompressionWebpackPlugin({
           test: /\.(js|css)$/,
           threshold: 10240, // 超过10kb的文件就压缩
-          deleteOriginalAssets: true, // 不删除源文件
+          deleteOriginalAssets: false, // 不删除源文件
           minRatio: 0.8
         })
       )

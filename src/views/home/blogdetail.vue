@@ -1,44 +1,39 @@
 <template>
   <div class="page page-current" id="xindex">
     <!-- 标题 -->
-    <van-nav-bar class="nav-classify" title="Game Category" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar class="nav-classify" title="Game News" left-arrow @click-left="onClickLeft" />
     <div class="game-content native-scroll">
-      <div class="item" @click="tocategory(item)" v-for="(item, index) in list">
-        <p>{{ item.category }}</p>
-      </div>
+      <p class="title">{{ info.title }}</p>
+      <p class="time">{{ info.updateTime }}</p>
+      <p class="content" v-html="info.content"></p>
     </div>
   </div>
 </template>
 
 <script>
-import { getcatetorys, getlikelist, getinfo, getBaseUrl } from '@api/user'
+import { getBloginfo, getlikelist, getinfo, getBaseUrl } from '@api/user'
 export default {
   data() {
     return {
-      list: []
+      info: []
     }
   },
   created() {
-    this._getcatetorys()
+    this._getBloginfo()
   },
   mounted() {},
   methods: {
     onClickLeft() {
       this.$router.go(-1)
     },
-    tocategory(item) {
-      this.$router.push({
-        path: '/classifyList',
-        query: {
-          categoryId: item.id,
-          name: item.category
-        }
-      })
-    },
-    _getcatetorys() {
-      getcatetorys().then(res => {
+
+    _getBloginfo() {
+      let cdata = {
+        id: this.$route.query.id
+      }
+      getBloginfo(cdata).then(res => {
         if (res.code == 0 && res.data) {
-          this.list = res.data
+          this.info = res.data
         } else {
         }
       })
@@ -48,6 +43,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page-current {
+  background: #87dff5;
+  height: 100%;
+
+  p {
+    color: #333;
+  }
+
+  .game-content {
+    padding: 20px;
+  }
+
+  .time {
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
 .nav-classify {
   background: #87dff5;
   /deep/.van-icon {
@@ -72,9 +92,7 @@ export default {
     line-height: 48px;
     margin-left: 20px;
     font-size: 16px;
-    color: #333;
-
-    border-bottom: 1px solid #4084b5;
+    color: #fff;
   }
 }
 </style>

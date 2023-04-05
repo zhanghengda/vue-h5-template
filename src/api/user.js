@@ -30,6 +30,25 @@ export function feedback(data) {
   })
 }
 
+export function gettoplist(params) {
+  console.log(params)
+  return request({
+    url: api.gettoplist,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
+
+export function getBloginfo(params) {
+  console.log(params)
+  return request({
+    url: api.getbloginfo,
+    method: 'get',
+    params,
+    hideloading: true
+  })
+}
 export function getcatetorys(params) {
   console.log(params)
   return request({

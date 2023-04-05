@@ -20,52 +20,51 @@
           </div>
         </nav>
       </div>
-      <van-pull-refresh v-model="refreshing" @refresh="onRefresh">
-        <van-list v-model:loading="loading" :finished="finished" finished-text="" @load="onLoad">
-          <div class="jiSkSr">
-            <a
-              @click="todetail(item)"
-              v-for="(item, index) in list"
-              :key="index"
-              class="sc-wr3rvk-0 jcoQuw sc-963fcq-2 dgMzoz sc-al88rd-2 global-cq"
-              :class="index == 0 ? 'ecpZbI' : index == 2 ? 'fcNZuN' : 'ldqLLW'"
-            >
-              <img
-                :src="baseUrl + item.logoUrl"
-                alt="Crazy Cars"
-                loading="eager"
-                decoding="async"
-                class="sc-18mcksl-1 jQcWfv"
-              />
-              <span class="sc-963fcq-0 ibRKmB global-cq-title">
-                {{ item.name }}
-              </span>
-            </a>
-          </div>
-
-          <div class="bottom-nav">
+      <div>
+        <div class="jiSkSr">
+          <a
+            @click="todetail(item)"
+            v-for="(item, index) in list"
+            :key="index"
+            class="sc-wr3rvk-0 jcoQuw sc-963fcq-2 dgMzoz sc-al88rd-2 global-cq"
+            :class="index == 0 ? 'ecpZbI' : index == 2 ? 'fcNZuN' : 'ldqLLW'"
+          >
             <img
-              src="@/assets/img/Fgame@2x.png"
+              :src="baseUrl + item.logoUrl"
               alt="Crazy Cars"
               loading="eager"
               decoding="async"
               class="sc-18mcksl-1 jQcWfv"
             />
-            <span class="name">Free Online Game</span>
-          </div>
-          <div class="sc-etrfs6-3 gExmnf">
-            <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/about')" rel="noopener nofollow" target="_blank"
-              >About</a
-            >
-            <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/service')" rel="noopener nofollow" target="_blank"
-              >Terms of service
-            </a>
-            <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/policy')" rel="noopener nofollow" target="_blank"
-              >Privacy statement
-            </a>
-          </div>
-        </van-list>
-      </van-pull-refresh>
+            <div v-if="item.tags" :class="item.tags == 'hot' ? 'hot' : 'new'">{{ item.tags }}</div>
+            <span class="sc-963fcq-0 ibRKmB global-cq-title">
+              {{ item.name }}
+            </span>
+          </a>
+        </div>
+
+        <div class="bottom-nav">
+          <img
+            src="@/assets/img/Fgame@2x.png"
+            alt="Crazy Cars"
+            loading="eager"
+            decoding="async"
+            class="sc-18mcksl-1 jQcWfv"
+          />
+          <span class="name">Free Online Game</span>
+        </div>
+        <div class="sc-etrfs6-3 gExmnf">
+          <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/about')" rel="noopener nofollow" target="_blank"
+            >About</a
+          >
+          <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/service')" rel="noopener nofollow" target="_blank"
+            >Terms of service
+          </a>
+          <a class="sc-etrfs6-2 leEuAa" @click="$router.push('/policy')" rel="noopener nofollow" target="_blank"
+            >Privacy statement
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -92,15 +91,13 @@ export default {
 
   computed: {
     baseUrl() {
-      return baseUrl
+      return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
   created() {
-    //  this._getBaseUrl()
     this._getProductQuery()
   },
   mounted() {},
-
   methods: {
     todetail(item) {
       this.$router.push({
@@ -132,7 +129,7 @@ export default {
       let _this = this
       let param = {
         pageNum: this.pageNum,
-        pageSize: 10,
+        pageSize: 200,
         categoryId: -1
       }
       getProductQuery(param).then(res => {

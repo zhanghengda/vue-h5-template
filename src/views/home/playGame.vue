@@ -4,15 +4,7 @@
     <div class="page page-current">
       <div style="display: contents">
         <nav mode="pill" class="sc-15orno7-0 jJDKTa1">
-          <div class="sc-jaa1t8-0 jJDKTa1" :style="'width:' + (zhankai ? '64px' : '34px')">
-            <img
-              src="@assets/img/back.png"
-              v-if="zhankai"
-              @click="openmenu"
-              alt="home"
-              decoding="async"
-              class="nav-img back"
-            />
+          <div class="sc-jaa1t8-0 jJDKTa1" :style="'width:' + (zhankai ? '30px' : '30px')">
             <img
               v-if="!zhankai"
               src="@assets/img/back.png"
@@ -73,7 +65,7 @@ export default {
 
   computed: {
     baseUrl() {
-      return baseUrl
+      return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
   created() {
