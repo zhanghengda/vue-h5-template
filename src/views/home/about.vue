@@ -1,9 +1,9 @@
 <template>
   <div class="page page-current">
-    <van-nav-bar title="About FGames" left-arrow @click-left="onClickLeft" />
+    <van-nav-bar title="About PssGames" left-arrow @click-left="onClickLeft" />
     <div class="content">
-      <h2 class="title">About FGames</h2>
-      <p>FGames is a free browser gaming platform founded in 2020 by a small group of friends.</p>
+      <h2 class="title">About PssGames</h2>
+      <p>PssGames is a free browser gaming platform founded in 2020 by a small group of friends.</p>
       <p>
         Our mission is simple - to create a browser-gaming platform that works seamlessly for users around the world,
         and rewards developers both big and small.

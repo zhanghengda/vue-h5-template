@@ -8,10 +8,10 @@
         consent to this Agreement.
       </p>
       <p>
-        This Agreement is between you and trade name “FGames” (hereinafter: “FGames”, “us", "we", or "our") which
+        This Agreement is between you and trade name “PssGames” (hereinafter: “PssGames”, “us", "we", or "our") which
         operates the following sites:
       </p>
-      <p>https://www.frivgamess.com</p>
+      <p>https://www.petiteseats.com</p>
       <p>
         This Agreement concerns your use of (including any access to) our website currently (together with any materials
         and services available therein, and successor site(s) thereto, the “Site”).
@@ -43,11 +43,12 @@
       <p class="title2">2. Information Submitted Through the Site</p>
 
       <p>
-        Your submission of information through the Site is governed by the FGames Privacy Policy, located at
-        https://www.frivgamess.com/privacy-policy (the “Privacy Policy”). You represent and warrant that any information
-        you provide in connection with the Site is and will remain accurate and complete, and that you will maintain and
-        update such information as needed. To the extent that there is any contradiction between the provisions of this
-        Agreement and the Privacy Policy regarding personal data, the provisions of the Privacy Policy shall prevail.
+        Your submission of information through the Site is governed by the PssGames Privacy Policy, located at
+        https://www.petiteseats.com/privacy-policy (the “Privacy Policy”). You represent and warrant that any
+        information you provide in connection with the Site is and will remain accurate and complete, and that you will
+        maintain and update such information as needed. To the extent that there is any contradiction between the
+        provisions of this Agreement and the Privacy Policy regarding personal data, the provisions of the Privacy
+        Policy shall prevail.
       </p>
 
       <p class="title2">3. Jurisdictional Issues</p>
@@ -77,7 +78,7 @@
         equipment (each, a “Virus”).
       </p>
       <p>
-        Use the Site for any commercial purpose other than the one agreed upon by FGames, or for any purpose that is
+        Use the Site for any commercial purpose other than the one agreed upon by PssGames, or for any purpose that is
         fraudulent or otherwise tortious or unlawful. Harvest or collect information about users of the Site unless this
         is done in accordance with the Privacy Policy.
       </p>
@@ -112,7 +113,7 @@
       <p class="title2">5. Embedding Games</p>
 
       <p>
-        FGames allows other websites to iframe portions of the website only when it provides a button “embed” to
+        PssGames allows other websites to iframe portions of the website only when it provides a button “embed” to
         retrieve an iframe source code.
       </p>
       <p>It is strictly forbidden to:</p>
@@ -129,7 +130,7 @@
       <p>Add any layers above the iframed portion of the Site.</p>
       <p>The site reserves the right to discontinue an iframed portion of the Site at any time.</p>
       <p>
-        If you have any questions regarding embedding our games, please reach out to publisher-support@frivgamess.com.
+        If you have any questions regarding embedding our games, please reach out to publisher-support@petiteseats.com.
       </p>
 
       <p class="title2">6. Products</p>
@@ -153,8 +154,8 @@
         If we decide to implement this functionality, Site visitors may make available certain materials (each, a
         “Submission”) through or in connection with the Site, including on profile pages or on the Site’s interactive
         services, such as message boards and other forums, and chatting, commenting and other messaging functionality in
-        accordance with the Rules of Conduct set out in Section 4. FGames has no control over and is not responsible or
-        liable for any use or misuse (including any distribution) by any third party of Submissions. IF YOU CHOOSE TO
+        accordance with the Rules of Conduct set out in Section 4. PssGames has no control over and is not responsible
+        or liable for any use or misuse (including any distribution) by any third party of Submissions. IF YOU CHOOSE TO
         MAKE ANY OF YOUR PERSONALLY IDENTIFIABLE OR OTHER INFORMATION PUBLICLY AVAILABLE THROUGH THE SITE, YOU DO SO AT
         YOUR OWN RISK. See however Section V.3 of the Privacy Policy as it relates to the collection of personal
         information.
@@ -174,7 +175,7 @@
         In addition, if you provide to us any ideas, proposals, suggestions or other materials through any means
         (“Feedback”), whether related to the Site or otherwise, such Feedback will be deemed a Submission, and you
         hereby acknowledge and agree that such Feedback is not confidential, and that your provision of such Feedback is
-        gratuitous, unsolicited and without restriction, and does not place FGames under any fiduciary or other
+        gratuitous, unsolicited and without restriction, and does not place PssGames under any fiduciary or other
         obligation.
       </p>
       <p>
@@ -202,11 +203,11 @@
         your personal, non-commercial use.
       </p>
 
-      <p class="title2">11. FGames’ Proprietary Rights</p>
+      <p class="title2">11. PssGames’ Proprietary Rights</p>
 
       <p>
         We and our suppliers own the Site, which is protected by proprietary rights and laws. Our trade names,
-        trademarks and service marks include FGames, 1001Juegos and any associated logos. All trade names, trademarks,
+        trademarks and service marks include PssGames, 1001Juegos and any associated logos. All trade names, trademarks,
         service marks and logos on the Site not owned by us are the property of their respective owners. You may not use
         our trade names, trademarks, service marks or logos in connection with any product or service that is not ours,
         or in any manner that is likely to cause confusion. Nothing contained or made available on the Site should be
@@ -229,7 +230,7 @@
         validity, timeliness, completeness, reliability, integrity, quality, legality, usefulness or safety of Third
         Party Materials, or any intellectual property rights therein. Certain Third Party Materials may, among other
         things, be inaccurate, misleading or deceptive. Nothing in this Agreement shall be deemed to be a representation
-        or warranty by FGames with respect to any Third Party Materials including, without limitation, any cookies or
+        or warranty by PssGames with respect to any Third Party Materials including, without limitation, any cookies or
         web beacons for whatever purposes pursued. We have no obligation to monitor Third Party Materials, and we may
         block or disable access to any Third Party Materials (in whole or part) through the Site at any time. In
         addition, the availability of any Third Party Materials through the Site does not imply our endorsement of, or
@@ -256,10 +257,10 @@
       <p>
         TO THE FULLEST EXTENT PERMITTED UNDER APPLICABLE LAW: (A) THE SITE AND ANY PRODUCTS AND THIRD PARTY MATERIALS
         ARE MADE AVAILABLE TO YOU ON AN “AS IS,” “WHERE IS” AND “WHERE AVAILABLE” BASIS, WITHOUT ANY WARRANTIES OF ANY
-        KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY; AND (B) FGames DISCLAIMS ALL WARRANTIES WITH RESPECT TO THE SITE
+        KIND, WHETHER EXPRESS, IMPLIED OR STATUTORY; AND (B) PssGames DISCLAIMS ALL WARRANTIES WITH RESPECT TO THE SITE
         AND ANY PRODUCTS AND THIRD PARTY MATERIALS, INCLUDING THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
         PARTICULAR PURPOSE, NON-INFRINGEMENT AND TITLE. ALL DISCLAIMERS OF ANY KIND (INCLUDING IN THIS SECTION AND
-        ELSEWHERE IN THIS AGREEMENT) ARE MADE FOR THE BENEFIT OF BOTH FGames AND ITS AFFILIATES AND THEIR RESPECTIVE
+        ELSEWHERE IN THIS AGREEMENT) ARE MADE FOR THE BENEFIT OF BOTH PssGames AND ITS AFFILIATES AND THEIR RESPECTIVE
         SHAREHOLDERS, DIRECTORS, OFFICERS, EMPLOYEES, AFFILIATES, AGENTS, REPRESENTATIVES, LICENSORS, SUPPLIERS AND
         SERVICE PROVIDERS (COLLECTIVELY, THE “AFFILIATED ENTITIES”), AND THEIR RESPECTIVE SUCCESSORS AND ASSIGNS.
       </p>
@@ -268,13 +269,13 @@
         is or will remain updated, complete, correct or secure, or that access to the Site will be uninterrupted. The
         Site may include inaccuracies, errors and materials that violate or conflict with this Agreement. Additionally,
         third parties may make unauthorized alterations to the Site. If you become aware of any such alteration, contact
-        us at legal@frivgamess.com with a description of such alteration and its location on the Site.
+        us at legal@petiteseats.com with a description of such alteration and its location on the Site.
       </p>
 
       <p class="title2">15. Limitation Of Liability</p>
 
       <p>
-        TO THE FULLEST EXTENT PERMITTED UNDER APPLICABLE LAW: (A) FGames WILL NOT BE LIABLE FOR ANY INDIRECT,
+        TO THE FULLEST EXTENT PERMITTED UNDER APPLICABLE LAW: (A) PssGames WILL NOT BE LIABLE FOR ANY INDIRECT,
         INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY OR PUNITIVE DAMAGES OF ANY KIND, UNDER ANY CONTRACT, TORT
         (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHER THEORY, INCLUDING DAMAGES FOR LOSS OF PROFITS, USE OR DATA,
         LOSS OF OTHER INTANGIBLES, LOSS OF SECURITY OF SUBMISSIONS (INCLUDING UNAUTHORIZED INTERCEPTION BY THIRD PARTIES
@@ -303,10 +304,10 @@
 
       <p>
         This Agreement is effective until terminated. We may terminate or suspend your use of the Site at any time and
-        without prior notice, for any or no reason, including, without limitation, if FGames determines in its sole
-        discretion that you have not adhered to the Rules of Conduct or if FGames believes that you have violated or
+        without prior notice, for any or no reason, including, without limitation, if PssGames determines in its sole
+        discretion that you have not adhered to the Rules of Conduct or if PssGames believes that you have violated or
         acted inconsistently with the letter or spirit of this Agreement. Upon any such termination or suspension, your
-        right to use the Site will immediately cease, and FGames may, without liability to you or any third party,
+        right to use the Site will immediately cease, and PssGames may, without liability to you or any third party,
         immediately deactivate or delete your user name, password and account, and all associated materials, without any
         obligation to provide any further access to such materials.
       </p>
@@ -314,9 +315,9 @@
 
       <p>
         ALL DISPUTES ARISING OUT OF OR RELATED TO THIS AGREEMENT OR ANY ASPECT OF THE RELATIONSHIP BETWEEN YOU AND
-        FGames, WHETHER BASED IN CONTRACT, TORT, STATUTE, FRAUD, MISREPRESENTATION OR ANY OTHER LEGAL THEORY, WILL BE
+        PssGames, WHETHER BASED IN CONTRACT, TORT, STATUTE, FRAUD, MISREPRESENTATION OR ANY OTHER LEGAL THEORY, WILL BE
         RESOLVED THROUGH FINAL AND BINDING ARBITRATION BEFORE A NEUTRAL ARBITRATOR INSTEAD OF IN A COURT BY A JUDGE OR
-        JURY AND YOU AGREE THAT YOU AND FGames ARE EACH WAIVING THE RIGHT TO TRIAL BY A JURY. YOU AGREE THAT ANY
+        JURY AND YOU AGREE THAT YOU AND PssGames ARE EACH WAIVING THE RIGHT TO TRIAL BY A JURY. YOU AGREE THAT ANY
         ARBITRATION UNDER THIS AGREEMENT WILL TAKE PLACE ON AN INDIVIDUAL BASIS; CLASS ARBITRATIONS AND CLASS ACTIONS
         ARE NOT PERMITTED AND YOU ARE AGREEING TO GIVE UP THE ABILITY TO PARTICIPATE IN A CLASS ACTION. The arbitration
         will be administered by CEPINA by a single arbitrator in accordance with the rules of procedure of CEPINA.
@@ -328,15 +329,15 @@
         We hereby notify you that parental control protections (such as computer hardware, software or filtering
         services) are commercially available that may assist you in limiting access to material that is harmful to
         minors. Information identifying current providers of such protections is available from
-        https://en.wikipedia.org/wiki/Comparison_of_content-control_software_and_providers. Please note that FGames does
-        not endorse any of the products or services listed on such site.
+        https://en.wikipedia.org/wiki/Comparison_of_content-control_software_and_providers. Please note that PssGames
+        does not endorse any of the products or services listed on such site.
       </p>
 
       <p class="title2">20. Information or Complaints</p>
 
       <p>
         If you have a question or complaint regarding the Site, please fill in our contact form at
-        https://www.frivgamess.com/contact or send an e-mail to legal@frivgamess.com.
+        https://www.petiteseats.com/contact or send an e-mail to legal@petiteseats.com.
       </p>
 
       <p class="title2">21. Copyright Infringement Claims</p>
@@ -346,7 +347,7 @@
         may send us a written notice by courier, mail or e-mail, requesting that we remove such material or block access
         to it. If you believe in good faith that someone has wrongly filed a notice of copyright infringement against
         you, you can send us a counter-notice. Notices and counter-notices must be sent by e-mail to
-        legal@frivgamess.com.
+        legal@petiteseats.com.
       </p>
       <p>We suggest that you consult your legal advisor before filing a notice or counter-notice.</p>
 
@@ -354,24 +355,24 @@
 
       <p>
         This Agreement does not, and shall not be construed to, create any partnership, joint venture,
-        employer-employee, agency or franchisor-franchisee relationship between you and FGames. If any provision of this
-        Agreement is found to be unlawful, void or for any reason unenforceable, that provision will be deemed severable
-        from this Agreement and will not affect the validity and enforceability of any remaining provision. You may not
-        assign, transfer or sublicense any or all of your rights or obligations under this Agreement without our express
-        prior written consent. We may assign, transfer or sublicense any or all of our rights or obligations under this
-        Agreement without restriction. No waiver by either party of any breach or default under this Agreement will be
-        deemed to be a waiver of any preceding or subsequent breach or default. All terms defined in the singular shall
-        have the same meanings when used in the plural, where appropriate and unless otherwise specified. Any use of the
-        term “including” or variations thereof in this Agreement shall be construed as if followed by the phrase
-        “without limitation.” This Agreement, including any terms and conditions incorporated herein, is the entire
-        agreement between you and FGames relating to the subject matter hereof, and supersedes any and all prior or
-        contemporaneous written or oral agreements or understandings between you and FGames relating to such subject
-        matter. Notices to you (including notices of changes to this Agreement) may be made via posting on the Site or
-        by e-mail (including in each case via links), or by regular mail. Without limitation, a printed version of this
-        Agreement and of any notice given in electronic form shall be admissible in judicial or administrative
-        proceedings based upon or relating to this Agreement to the same extent and subject to the same conditions as
-        other business documents and records originally generated and maintained in printed form. FGames will not be
-        responsible for any failure to fulfill any obligation due to any cause beyond its control.
+        employer-employee, agency or franchisor-franchisee relationship between you and PssGames. If any provision of
+        this Agreement is found to be unlawful, void or for any reason unenforceable, that provision will be deemed
+        severable from this Agreement and will not affect the validity and enforceability of any remaining provision.
+        You may not assign, transfer or sublicense any or all of your rights or obligations under this Agreement without
+        our express prior written consent. We may assign, transfer or sublicense any or all of our rights or obligations
+        under this Agreement without restriction. No waiver by either party of any breach or default under this
+        Agreement will be deemed to be a waiver of any preceding or subsequent breach or default. All terms defined in
+        the singular shall have the same meanings when used in the plural, where appropriate and unless otherwise
+        specified. Any use of the term “including” or variations thereof in this Agreement shall be construed as if
+        followed by the phrase “without limitation.” This Agreement, including any terms and conditions incorporated
+        herein, is the entire agreement between you and PssGames relating to the subject matter hereof, and supersedes
+        any and all prior or contemporaneous written or oral agreements or understandings between you and PssGames
+        relating to such subject matter. Notices to you (including notices of changes to this Agreement) may be made via
+        posting on the Site or by e-mail (including in each case via links), or by regular mail. Without limitation, a
+        printed version of this Agreement and of any notice given in electronic form shall be admissible in judicial or
+        administrative proceedings based upon or relating to this Agreement to the same extent and subject to the same
+        conditions as other business documents and records originally generated and maintained in printed form. PssGames
+        will not be responsible for any failure to fulfill any obligation due to any cause beyond its control.
       </p>
       <p></p>
       <p></p>

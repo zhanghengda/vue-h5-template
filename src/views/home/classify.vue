@@ -4,6 +4,7 @@
     <van-nav-bar class="nav-classify" title="Game Category" left-arrow @click-left="onClickLeft" />
     <div class="game-content native-scroll">
       <div class="item" @click="tocategory(item)" v-for="(item, index) in list">
+        <img :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
         <p>{{ item.category }}</p>
       </div>
     </div>
@@ -12,10 +13,17 @@
 
 <script>
 import { getcatetorys, getlikelist, getinfo, getBaseUrl } from '@api/user'
+import { baseUrl } from '@/config'
+
 export default {
   data() {
     return {
       list: []
+    }
+  },
+  computed: {
+    baseUrl() {
+      return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
   created() {
@@ -75,6 +83,16 @@ export default {
     color: #333;
 
     border-bottom: 1px solid #4084b5;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    .logo {
+      height: 30px;
+      width: 30px;
+      margin-right: 20px;
+    }
   }
 }
 </style>

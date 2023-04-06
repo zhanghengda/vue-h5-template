@@ -4,58 +4,58 @@
     <div class="content">
       <h2 class="title">Privacy policy</h2>
       <p>
-        FGames is committed to protecting the privacy of all visitors who use our site and applications, including older
-        users above the age of 13 ("General Users") and younger users under the age of 13 ("Children Users"), together
-        the "Users".
+        PssGames is committed to protecting the privacy of all visitors who use our site and applications, including
+        older users above the age of 13 ("General Users") and younger users under the age of 13 ("Children Users"),
+        together the "Users".
       </p>
       <p>
-        This privacy policy ("Privacy Policy" or "Policy") is designed to provide transparency into FGames’s privacy
+        This privacy policy ("Privacy Policy" or "Policy") is designed to provide transparency into PssGames’s privacy
         practices and principles for information that we collect from General Users through our Frivgamess.com web
-        platform, mobile applications, our FGames Publishing services, and other general-audience sites and applications
-        ("FGames General Site").
+        platform, mobile applications, our PssGames Publishing services, and other general-audience sites and
+        applications ("PssGames General Site").
       </p>
 
       <p>
-        By using the FGames General Site, you agree to observe and be bound by this Privacy Policy and you consent to
+        By using the PssGames General Site, you agree to observe and be bound by this Privacy Policy and you consent to
         the processing, collection, use, and disclosure of your information and data in accordance with the terms of
-        this Privacy Policy. Please do not use the FGames Site if you do not agree to this Privacy Policy.
+        this Privacy Policy. Please do not use the PssGames Site if you do not agree to this Privacy Policy.
       </p>
       <p>If you have any questions concerning this Privacy Policy, please contact us at privacy@Frivgamess.com.</p>
       <p class="title2">1. General information</p>
       <p>
-        All features on the FGames Site are available without the need for registration by Users. No personal data (such
-        as email addresses and phone numbers) are requested from users. FGames may collect certain electronic data (such
-        as the User’s IP address, cookies or device ID).
+        All features on the PssGames Site are available without the need for registration by Users. No personal data
+        (such as email addresses and phone numbers) are requested from users. PssGames may collect certain electronic
+        data (such as the User’s IP address, cookies or device ID).
       </p>
       <p class="title2">2. Data collection and its purposes</p>
 
       <p>
         Our servers automatically recognize visitors’ domain names and IP addresses (the number assigned to computers on
-        the Internet). The FGames Site may gather anonymous "traffic data" that does not personally identify you, but
+        the Internet). The PssGames Site may gather anonymous "traffic data" that does not personally identify you, but
         that data may be helpful for marketing purposes or for improving the services we offer.
       </p>
       <p>
-        When your computer or mobile device contacts our web servers (for example, when you visit the FGames Site), our
-        web servers automatically collect usage information. Such usage information includes information about how our
-        visitors use and navigate the FGames Site. It can include the number and frequency of visitors to each web page
-        and the length of their stays, browser type, and referrer data that identifies the web page visited prior and
-        subsequent to visiting our Site.
+        When your computer or mobile device contacts our web servers (for example, when you visit the PssGames Site),
+        our web servers automatically collect usage information. Such usage information includes information about how
+        our visitors use and navigate the PssGames Site. It can include the number and frequency of visitors to each web
+        page and the length of their stays, browser type, and referrer data that identifies the web page visited prior
+        and subsequent to visiting our Site.
       </p>
       <p>
         Traffic information may also be shared with business partners and advertisers on an aggregate and anonymous
         basis. More information about sharing information will follow in part 7.
       </p>
       <p>
-        In addition, Advertisers on the FGames General Site might receive information gathered by cookies for targeted
+        In addition, Advertisers on the PssGames General Site might receive information gathered by cookies for targeted
         advertising purposes. Further information regarding the use of cookies can be found below.
       </p>
 
       <p class="title2">3. Data Retention</p>
 
-      <p>FGames may retain users’ data for the following purposes:</p>
-      <p>• To develop new features and improve the FGames Site;</p>
+      <p>PssGames may retain users’ data for the following purposes:</p>
+      <p>• To develop new features and improve the PssGames Site;</p>
       <p>• To support subsequent customer service inquiries;</p>
-      <p>• To improve the safety and security of the FGames Site; or</p>
+      <p>• To improve the safety and security of the PssGames Site; or</p>
       <p>• Comply with our legal obligations.</p>
       <p>
         We will retain your information for as long as is reasonably necessary in relation to the purposes for which
@@ -65,37 +65,38 @@
       <p class="title2">4. Third party games</p>
 
       <p>
-        This Privacy Policy does not apply to the processing of personal data by data controllers other than FGames,
-        such as providers of third party games available on the FGames Site. The relevant provider of such a third party
-        game is responsible for ensuring that any processing of personal data by them in the context of a game complies
-        with applicable data protection laws.
+        This Privacy Policy does not apply to the processing of personal data by data controllers other than PssGames,
+        such as providers of third party games available on the PssGames Site. The relevant provider of such a third
+        party game is responsible for ensuring that any processing of personal data by them in the context of a game
+        complies with applicable data protection laws.
       </p>
       <p>
-        Generally, FGames does not permit third party content providers to collect personal data about Users. However,
-        if any personal data will be collected by a third party content provider, FGames will contractually require that
-        the processing of personal data by them in the context of a game complies with applicable data protection laws.
+        Generally, PssGames does not permit third party content providers to collect personal data about Users. However,
+        if any personal data will be collected by a third party content provider, PssGames will contractually require
+        that the processing of personal data by them in the context of a game complies with applicable data protection
+        laws.
       </p>
 
       <p class="title2">5. Cookies</p>
 
       <p>
-        Like many websites and applications, this FGames Site makes use of "cookies" which are saved on the user’s
-        computer. In addition, third party networks serving advertisements on the FGames Site (the "Advertisers") might
-        use cookies. Cookies are a way of remembering who you are. A cookie is a small text file that is stored on your
-        computer’s hard drive or stored temporarily in your computer’s memory. There are two kinds of cookies: those
-        that are "session" oriented and those that are "persistent". Session cookies delete from your computer when you
-        close your browser. Persistent cookies retain information for later use tomorrow, next week, next month, or
-        whenever they are set to expire.
+        Like many websites and applications, this PssGames Site makes use of "cookies" which are saved on the user’s
+        computer. In addition, third party networks serving advertisements on the PssGames Site (the "Advertisers")
+        might use cookies. Cookies are a way of remembering who you are. A cookie is a small text file that is stored on
+        your computer’s hard drive or stored temporarily in your computer’s memory. There are two kinds of cookies:
+        those that are "session" oriented and those that are "persistent". Session cookies delete from your computer
+        when you close your browser. Persistent cookies retain information for later use tomorrow, next week, next
+        month, or whenever they are set to expire.
       </p>
       <p>
-        FGames and its Advertisers may use cookies, or similar technologies to enhance and personalize your experience
-        on the FGames General Site, including the following:
+        PssGames and its Advertisers may use cookies, or similar technologies to enhance and personalize your experience
+        on the PssGames General Site, including the following:
       </p>
-      <p>• to operate and improve offerings on the FGames Site;</p>
-      <p>• to help authenticate you when you are on the FGames Site;</p>
+      <p>• to operate and improve offerings on the PssGames Site;</p>
+      <p>• to help authenticate you when you are on the PssGames Site;</p>
       <p>• to remember your preferences;</p>
-      <p>• to present and help measure and research the effectiveness of FGames’s offerings;</p>
-      <p>• to customize the content provided to you through the FGames Site; and, • to show targeted ads.</p>
+      <p>• to present and help measure and research the effectiveness of PssGames’s offerings;</p>
+      <p>• to customize the content provided to you through the PssGames Site; and, • to show targeted ads.</p>
       <p>
         Users can refuse the saving of cookies or delete them by adjusting the browser settings on his or her computer.
         To learn more on how to adjust the settings of your internet browser, we recommend the user visit the website of
@@ -131,7 +132,7 @@
       </p>
 
       <p>
-        You may be able to have the device you use to access the FGames Site warn you each time a cookie or most other
+        You may be able to have the device you use to access the PssGames Site warn you each time a cookie or most other
         Tracking Technologies is being set (other than Flash cookies), or you can choose to turn off such warnings. This
         is done through your browser on the device you use to access the Website. Additional information on warnings and
         removal of warnings may be available through your browser’s support feature.
@@ -142,7 +143,7 @@
         computer, please visit Adobe’s website.
       </p>
       <p>
-        Please be aware that certain areas and features of the FGames Site can only be accessed in conjunction with
+        Please be aware that certain areas and features of the PssGames Site can only be accessed in conjunction with
         Tracking Technologies, and that disabling Tracking Technologies might prevent you from accessing such content.
       </p>
       <p>If you have any questions concerning cookies, please contact us at privacy@Frivgamess.com.</p>
@@ -150,7 +151,7 @@
       <p class="title2">6. Links to third party websites</p>
 
       <p>
-        The FGames General Site knowingly links out to the following third party websites. The names of these third
+        The PssGames General Site knowingly links out to the following third party websites. The names of these third
         party websites link to their privacy policy.
       </p>
       <p>• YouTube</p>
@@ -163,35 +164,35 @@
       <p class="title2">7. Sharing information</p>
 
       <p>
-        FGames may share your persistent identifiers with third parties such as business partners under the following
+        PssGames may share your persistent identifiers with third parties such as business partners under the following
         circumstances:
       </p>
       <p>
         Security: We may release information about our Users, including IP address, when legally required to do so, at
         the request of governmental authorities conducting an investigation or to verify or enforce compliance with the
-        policies governing the FGames Site and applicable laws. We may also disclose such user information whenever we
-        believe disclosure is necessary to protect the rights, property or safety of FGames, or any of our respective
+        policies governing the PssGames Site and applicable laws. We may also disclose such user information whenever we
+        believe disclosure is necessary to protect the rights, property or safety of PssGames, or any of our respective
         business partners, customers or others.
       </p>
       <p>
         Aggregate Information: We may disclose non-identifying, aggregated user statistics to third parties for a
         variety of purposes, including describing our services to prospective partners and other third parties. Examples
-        of such non-personal information include the number of users who visited this FGames Site during a specific time
-        period or played a specific game on this Website.
+        of such non-personal information include the number of users who visited this PssGames Site during a specific
+        time period or played a specific game on this Website.
       </p>
       <p>
         Advertising: We may share technical information such as IP address or device ID with our advertising partners.
-        For advertising on the FGames General Site, this information may be used to serve behaviorally targeted ads or
+        For advertising on the PssGames General Site, this information may be used to serve behaviorally targeted ads or
         profiling.
       </p>
 
       <p class="title2">8. International Data Transfers</p>
 
       <p>
-        FGames may work with third parties that are based outside of the European Economic Area (EEA), and may transfer
-        data about you to the countries in which these parties reside. Whenever we share personal data originating in
-        the EU with an entity outside of the EEA, we will do so on the basis of the EU standard contractual clauses,
-        with your consent, or because such transfer is necessary performance of a contract.
+        PssGames may work with third parties that are based outside of the European Economic Area (EEA), and may
+        transfer data about you to the countries in which these parties reside. Whenever we share personal data
+        originating in the EU with an entity outside of the EEA, we will do so on the basis of the EU standard
+        contractual clauses, with your consent, or because such transfer is necessary performance of a contract.
       </p>
       <p>
         If you have any questions about our policy regarding international data transfers, please contact us at
@@ -232,7 +233,7 @@
 
       <p class="title2">10. Individual Rights</p>
       <p>
-        FGames makes certain choices available to you when it comes to your personal data. Please review the below
+        PssGames makes certain choices available to you when it comes to your personal data. Please review the below
         information outlining your choices and how to exercise them. We will respond to all requests within a reasonable
         timeframe. If our full response will ever take more than a month due to complexity or scope, we will notify you
         of this and keep you updated. We may request more information to confirm your identity before acting on any
@@ -291,7 +292,7 @@
         within a reasonable timeframe.
       </p>
       <p>Email: privacy@Frivgamess.com</p>
-      <p>FGames</p>
+      <p>PssGames</p>
       <p>Success Commercial Building,</p>
       <p>Hennessy Road, Wan Chai, Wan Chai,</p>
       <p>Hong Kong</p>
@@ -315,7 +316,7 @@
         If you have any questions concerning this Privacy Policy, or data collection in particular, please contact us at
         privacy@Frivgamess.com or:
       </p>
-      <p>FGames</p>
+      <p>PssGames</p>
       <p>Success Commercial Building,</p>
       <p>Hennessy Road, Wan Chai, Wan Chai,</p>
       <p>Hong Kong</p>
