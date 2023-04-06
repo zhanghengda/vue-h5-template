@@ -1,7 +1,7 @@
 <!-- home -->
 <template>
-  <div class="page-group">
-    <div class="page page-current">
+  <div ref="scrollDiv" @scroll="scroll" class="page-group">
+    <div ref="content" class="page page-current">
       <div style="display: contents">
         <nav mode="pill" class="sc-15orno7-0 jJDKTa">
           <div class="sc-11jy73d-3 jZlJdu">
@@ -94,11 +94,26 @@ export default {
       return location.hostname === 'localhost' ? baseUrl : ''
     }
   },
+
+  watch: {
+    $route(to, from) {
+      if ((from.path == '/about' || from.path == '/service' || from.path == '/policy') && to.path == '/home') {
+        let recruitScrollY = this.$refs.content.scrollHeight
+        let scrollElem = this.$refs.scrollDiv
+        scrollElem.scrollTo({ top: recruitScrollY, behavior: 'smooth' })
+      }
+    }
+  },
   created() {
     this._getProductQuery()
   },
-  mounted() {},
+  mounted() {
+    console.log('ssss')
+  },
   methods: {
+    scroll(e) {
+      console.log('eee', e)
+    },
     todetail(item) {
       this.$router.push({
         path: '/detail',
