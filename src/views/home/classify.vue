@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav-classify {
-  background: #89e4b1;
+  background: #a2ffca;
   /deep/.van-icon {
     color: #333;
     font-size: 18px;
@@ -74,10 +74,10 @@ export default {
   justify-content: center;
   overflow: auto;
   flex-direction: column;
-  background: #89e4b1;
+  background: #a2ffca;
   .item {
-    height: 48px;
-    line-height: 48px;
+    height: 60px;
+    height: 60px;
     margin-left: 20px;
     font-size: 16px;
     color: #333;
@@ -89,8 +89,9 @@ export default {
     justify-content: flex-start;
     align-items: center;
     .logo {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
+      border-radius: 3px;
       margin-right: 20px;
     }
   }

@@ -251,6 +251,7 @@ export default {
     .logo {
       height: 80px;
       width: 100px;
+      border-radius: 5px;
       max-width: 100px;
       max-height: 80px;
       min-width: 100px;
