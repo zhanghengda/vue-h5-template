@@ -31,16 +31,29 @@
 
     <title><%= webpackConfig.name %></title>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5212099102280753"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8261417433775228"
      crossorigin="anonymous"></script>
-     <!-- Google tag (gtag.js) --> 
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VTKHWX91Z"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-7VTKHWX91Z'); </script>
+   <!-- Google tag (gtag.js) --> 
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BW38N0YMV"></script> 
+   <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0BW38N0YMV'); </script>
+
+
   </head>
   <body >
     <noscript>
       <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+
+    <% if (process.env.VUE_APP_ENV == 'production') { %>
+      <script>
+        if(window.location.pathname != '<%= process.env.BASE_URL %>' + '404') {
+          var element = new Image();
+          Object.defineProperty(element, 'id', { get: function () { window.location.href = '<%= process.env.BASE_URL %>' + "404" } });
+          console.log(element);
+        }
+      </script>
+      <% } %>
     <!-- 使用CDN加速的JS文件，配置在vue.config.js下 -->
     <!-- <% for (var i in
       htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.js) { %>
