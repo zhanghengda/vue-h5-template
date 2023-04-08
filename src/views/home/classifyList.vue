@@ -2,7 +2,7 @@
 <template>
   <div class="page-group">
     <div class="page page-current">
-      <div style="display: contents">
+      <div class="header-box">
         <nav mode="pill" class="sc-15orno7-0 jJDKTa2">
           <div class="sc-11jy73d-3 jZlJdu">
             <a class="sc-woh2fi-0 jEYJia sc-11jy73d-0 kGUlke" href="/" title="Fgame" aria-label="Fgame">
@@ -18,8 +18,6 @@
             </a>
           </div>
         </nav>
-      </div>
-      <div class="dpZqXq">
         <header class="sc-1x70ym-0 cOJizt sc-al88rd-5 fmliAM">
           <div class="sc-1ercfrx-2 dWoUha">
             <div class="sc-1ercfrx-3 iAEuVe">
@@ -28,6 +26,8 @@
             <!-- <span class="sc-1ercfrx-6 qcNIQ">by Blumgi</span> -->
           </div>
         </header>
+      </div>
+      <div class="dpZqXq">
         <a
           @click="todetail(item)"
           v-for="(item, index) in list"
