@@ -1,11 +1,16 @@
 <!-- home -->
 <template>
-  <div ref="scrollDiv" @scroll="scroll" class="page-group">
+  <div ref="scrollDiv" class="page-group">
     <div ref="content" class="page page-current">
       <div style="display: contents">
-        <nav mode="pill" class="sc-15orno7-0 jJDKTa">
+        <nav mode="pill" class="sc-15orno7-0 jJDKTa" :style="{ top: getHeight + 'px' }">
           <div class="sc-11jy73d-3 jZlJdu">
-            <a class="sc-woh2fi-0 jEYJia sc-11jy73d-0 kGUlke" href="/" title="Fgame" aria-label="Fgame">
+            <a
+              class="sc-woh2fi-0 jEYJia sc-11jy73d-0 kGUlke"
+              @click="$router.push('/home')"
+              title="Fgame"
+              aria-label="Fgame"
+            >
               <img src="@assets/img/logo.png" alt="home" decoding="async" class="nav-img" />
             </a>
           </div>
@@ -24,7 +29,7 @@
         <div class="jiSkSr">
           <a
             @click="todetail(item)"
-            v-for="(item, index) in list"
+            v-for="(item, index) in games"
             :key="index"
             class="sc-wr3rvk-0 jcoQuw sc-963fcq-2 dgMzoz sc-al88rd-2 global-cq"
             :class="index == 0 ? 'ecpZbI' : index == 2 ? 'fcNZuN' : 'ldqLLW'"
@@ -72,6 +77,7 @@
 <script>
 import { getProductQuery, getBaseUrl } from '@api/user'
 import { baseUrl } from '@/config'
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
@@ -83,16 +89,27 @@ export default {
       productdata: null,
       headerfixed: false,
       sn: '',
+      height: '30px',
       pageNum: 1,
       isShow: false,
-      images: []
+      images: [],
+      isflag: true
     }
   },
 
   computed: {
     baseUrl() {
       return location.hostname === 'localhost' ? baseUrl : ''
-    }
+    },
+    getHeight() {
+      let ele = document.getElementById('aswift_3_host')
+      if (ele) {
+        this.height = 16 + 94
+      }
+      this.height = 16
+      return this.height
+    },
+    ...mapGetters(['games'])
   },
   beforeRouteLeave(to, from, next) {
     let position = window.scrollY //记录离开页面的位置
@@ -114,15 +131,13 @@ export default {
     }
   },
   created() {
-    this._getProductQuery()
+    // this._getProductQuery()
+    this.isflag = false
   },
   mounted() {
     console.log('ssss')
   },
   methods: {
-    scroll(e) {
-      console.log('eee', e)
-    },
     todetail(item) {
       this.$router.push({
         path: '/detail',
@@ -130,23 +145,6 @@ export default {
           id: item.id
         }
       })
-    },
-    onLoad() {
-      if (this.refreshing) {
-        this.list = []
-        this.refreshing = false
-      }
-      this._getProductQuery()
-    },
-
-    onRefresh() {
-      // 清空列表数据
-      this.finished = false
-      this.pageNum = 1
-      // 重新加载数据
-      // 将 loading 设置为 true，表示处于加载状态
-      this.loading = true
-      this.onLoad()
     },
 
     _getProductQuery() {
@@ -158,29 +156,10 @@ export default {
       }
       getProductQuery(param).then(res => {
         if (res.code == 0 && res.data) {
-          if (_this.list == 0) {
-            this.list = res.data.records
-          } else {
-            _this.list = [..._this.list, ...res.data.records]
-          }
-          this.pageNum++
-          setTimeout(() => {
-            // 加载状态结束
-            _this.loading = false
-
-            // 数据全部加载完成
-            if (res.data.records == 0) {
-              this.finished = true
-            }
-          }, 1000)
-
-          console.log('productdata', this.productdata)
+          this.list = res.data.records
         } else {
         }
       })
-    },
-    onShow() {
-      this.isShow = !this.isShow
     }
   }
 }

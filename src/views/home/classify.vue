@@ -3,7 +3,7 @@
     <!-- 标题 -->
     <van-nav-bar class="nav-classify" title="Game Category" left-arrow @click-left="onClickLeft" />
     <div class="game-content native-scroll">
-      <div class="item" @click="tocategory(item)" v-for="(item, index) in list">
+      <div class="item" @click="tocategory(item)" v-for="(item, index) in catetorys">
         <img :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
         <p>{{ item.category }}</p>
       </div>
@@ -13,6 +13,8 @@
 
 <script>
 import { getcatetorys, getlikelist, getinfo, getBaseUrl } from '@api/user'
+import { mapGetters } from 'vuex'
+
 import { baseUrl } from '@/config'
 
 export default {
@@ -24,10 +26,11 @@ export default {
   computed: {
     baseUrl() {
       return location.hostname === 'localhost' ? baseUrl : ''
-    }
+    },
+    ...mapGetters(['catetorys'])
   },
   created() {
-    this._getcatetorys()
+    // this._getcatetorys()
   },
   mounted() {},
   methods: {
