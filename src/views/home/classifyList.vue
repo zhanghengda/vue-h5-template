@@ -112,7 +112,7 @@ export default {
       }
       let param = {
         pageNum: 1,
-        pageSize: 20,
+        pageSize: 200,
         categoryId: this.$route.query.categoryId
       }
       getProductQuery(param).then(res => {

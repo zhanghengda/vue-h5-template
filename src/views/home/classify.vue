@@ -4,6 +4,7 @@
     <van-nav-bar class="nav-classify" title="Game Category" left-arrow @click-left="onClickLeft" />
     <div class="game-content native-scroll">
       <div class="item" @click="tocategory(item)" v-for="(item, index) in list">
+        <img :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
         <p>{{ item.category }}</p>
       </div>
     </div>
@@ -68,13 +69,21 @@ export default {
   flex-direction: column;
   background: #87dff5;
   .item {
-    height: 48px;
-    line-height: 48px;
+    height: 60px;
+    line-height: 60px;
     margin-left: 20px;
     font-size: 16px;
     color: #333;
 
     border-bottom: 1px solid #4084b5;
+    align-items: center;
+    display: flex;
+    .logo {
+      height: 40px;
+      width: 40px;
+      border-radius: 3px;
+      margin-right: 20px;
+    }
   }
 }
 </style>
