@@ -2,9 +2,9 @@
 <template>
   <div class="page-group page-detail">
     <div class="page page-current">
-      <div style="display: contents">
-        <nav mode="pill" class="sc-15orno7-0 jJDKTa1">
-          <div class="sc-jaa1t8-0 jJDKTa1" :style="'width:' + (zhankai ? '30px' : '30px')">
+      <div>
+        <nav mode="pill" class="sc-15orno7-0">
+          <div class="sc-jaa1t8-0 jJDKTa1">
             <img
               v-if="!zhankai"
               src="@assets/img/back.png"
