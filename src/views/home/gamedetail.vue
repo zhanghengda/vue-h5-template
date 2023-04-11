@@ -46,6 +46,14 @@
           <div class="play-btn" @click="toplay">PLAY NOW</div>
         </div>
       </div>
+
+      <!-- <ins
+        class="adsbygoogle"
+        style="display: inline-block; width: 320px; height: 100px"
+        data-ad-client="ca-pub-8261417433775228"
+        data-ad-slot="5135953557"
+      ></ins> -->
+
       <p class="maylike">You may like</p>
 
       <div class="list">
