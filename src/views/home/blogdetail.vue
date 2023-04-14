@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .page-current {
-  background: #a2ffca;
+  background: #546aff;
   height: 100%;
 
   p {
@@ -69,7 +69,7 @@ export default {
   }
 }
 .nav-classify {
-  background: #a2ffca;
+  background: #546aff;
   /deep/.van-icon {
     color: #333;
     font-size: 18px;
@@ -86,7 +86,7 @@ export default {
   justify-content: center;
   overflow: auto;
   flex-direction: column;
-  background: #a2ffca;
+  background: #546aff;
   .item {
     height: 48px;
     line-height: 48px;

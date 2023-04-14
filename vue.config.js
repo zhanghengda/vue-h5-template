@@ -57,7 +57,7 @@ module.exports = {
     proxy: {
       //配置跨域
       '/gs': {
-        target: 'https://petiteseats.com/gs',
+        target: 'http://47.254.23.164:8300/gs',
         // ws:true,
         changOrigin: true,
         pathRewrite: {

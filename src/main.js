@@ -11,6 +11,8 @@ import { Lazyload } from 'vant'
 // import Vconsole from 'vconsole'
 import { $cdn } from '@/config'
 // Vue.prototype.$cdn = $cdn
+import VueAppend from 'vue-append'
+Vue.use(VueAppend)
 
 Vue.use(Lazyload)
 // 全局引入按需引入UI库 vant

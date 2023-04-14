@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .layout-content {
   height: 100%;
-  background: #a2ffca;
+  background: #546aff;
   background-repeat: round;
   background-size: cover;
 }
