@@ -21,12 +21,6 @@
       </div>
     </div>
     <div class="palygame" v-if="!start" @click="start = true">
-      <div
-        id="adsgoeshere2"
-        class="guanggao_tempmargin"
-        style="text-align: center; height: auto !important"
-        v-html="adsenseContent"
-      ></div>
       <div class="play-box" v-if="productdata && productdata.href">
         <img :src="baseUrl + productdata.logoUrl" alt="home" decoding="async" class="play-icon" />
         <div class="meng"></div>
@@ -57,7 +51,6 @@ export default {
       tabIndex: 0,
       start: false,
       zhankai: true,
-      adsenseContent: '',
       loading: true,
       refreshing: false,
       finished: false,
@@ -82,10 +75,7 @@ export default {
     this._getinfo()
     this._getProductQuery()
   },
-  mounted() {
-    let _this = this
-    _this.adsenseContent = document.getElementById('divadsensedisplaynone1').innerHTML
-  },
+  mounted() {},
   methods: {
     _getBaseUrl() {
       getBaseUrl().then(res => {

@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav-classify {
-  background: #546aff;
+  background: #a2ffca;
   /deep/.van-icon {
     color: #333;
     font-size: 18px;
@@ -77,13 +77,13 @@ export default {
   justify-content: center;
   overflow: auto;
   flex-direction: column;
-  background: #546aff;
+  background: #a2ffca;
   .item {
     height: 60px;
     height: 60px;
     margin-left: 20px;
     font-size: 16px;
-    color: #fff;
+    color: #333;
 
     border-bottom: 1px solid #4084b5;
 

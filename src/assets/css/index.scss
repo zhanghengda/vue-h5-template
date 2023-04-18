@@ -18,7 +18,7 @@
 
     .name {
       font-size: 14px;
-      color: #fff;
+      color: #222222;
       margin-left: 20px;
     }
   }
@@ -29,7 +29,7 @@
     margin-bottom: 20px;
 
     .leEuAa {
-      color: #fff;
+      color: #222222;
       text-align: center;
       text-decoration: underline;
       font-size: inherit;
@@ -72,34 +72,6 @@
     transform: 0.5s all;
     left: 0;
   }
-
-  .game-content {
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-    flex-direction: column;
-    margin-bottom: 20px;
-    .item {
-      height: 100px;
-      font-size: 16px;
-      margin: 5px auto;
-      width: calc(100% - 40px);
-      color: #fff;
-      background-image: url('~@/assets/img/categories-btn.svg');
-
-      display: flex;
-
-      justify-content: flex-start;
-      align-items: center;
-      .logo {
-        height: 40px;
-        width: 40px;
-        margin-left: 10px;
-        border-radius: 5px;
-        margin-right: 20px;
-      }
-    }
-  }
   .header-box {
     width: 100%;
     display: flex;
@@ -139,7 +111,7 @@
 
   .palygame {
     border-radius: 8px;
-    margin-top: 108px;
+    margin-top: 158px;
     overflow: hidden;
     .play-box {
       display: flex;
@@ -335,7 +307,7 @@
       flex-wrap: wrap;
       grid-auto-flow: dense;
       justify-content: space-evenly;
-      margin: 16px auto 10px;
+      margin: 16px auto 0px;
       padding: 0 20px;
       list-style-type: none;
       .dgMzoz {
@@ -470,13 +442,6 @@
         min-height: 40px;
         max-height: 80px;
         overflow: auto;
-
-        background: rgba(255, 255, 255, 0.6);
-        color: #000;
-        padding: 5px;
-        border-radius: 10px;
-
-        width: 100%;
       }
 
       .play-btn {

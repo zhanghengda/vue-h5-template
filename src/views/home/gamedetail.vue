@@ -46,12 +46,13 @@
           <div class="play-btn" @click="toplay">PLAY NOW</div>
         </div>
       </div>
-      <div
-        id="adsgoeshere"
-        class="guanggao_tempmargin"
-        style="text-align: center; height: auto !important"
-        v-html="adsenseContent"
-      ></div>
+
+      <!-- <ins
+        class="adsbygoogle"
+        style="display: inline-block; width: 320px; height: 100px"
+        data-ad-client="ca-pub-8261417433775228"
+        data-ad-slot="5135953557"
+      ></ins> -->
 
       <p class="maylike">You may like</p>
 
@@ -74,6 +75,7 @@
           </a>
         </div>
       </div>
+
       <p class="maylike">Game News</p>
 
       <div class="article-list">
@@ -89,7 +91,6 @@
 <script>
 import { getProductQuery, gettoplist, getlikelist, getinfo, getBaseUrl } from '@api/user'
 import { baseUrl } from '@/config'
-import Advertising from '@/components/Advertising.vue' //弹框
 
 export default {
   data() {
@@ -102,18 +103,14 @@ export default {
       refreshing: false,
       finished: false,
       productdata: null,
-
       value: 5,
-      adsenseContent: '',
       headerfixed: false,
       sn: '',
       isShow: false,
       images: []
     }
   },
-  components: {
-    Advertising
-  },
+
   computed: {
     baseUrl() {
       return location.hostname === 'localhost' ? baseUrl : ''
@@ -123,15 +120,11 @@ export default {
     if (!this.$route.query || !this.$route.query.id) {
       this.$router.push('/')
     }
-
     this._getinfo()
     this._getProductQuery()
     this._getblogQuery()
   },
-  mounted() {
-    let _this = this
-    _this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
-  },
+  mounted() {},
   methods: {
     _getBaseUrl() {
       getBaseUrl().then(res => {
@@ -286,11 +279,6 @@ export default {
       color: rgba(0, 0, 0, 0.6);
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.6);
-      color: #000;
-      padding: 5px;
-      border-radius: 10px;
     }
   }
 }

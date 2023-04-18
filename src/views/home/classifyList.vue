@@ -15,6 +15,9 @@
               <a class="sc-jaa1t8-1 bxeyFq" href="/" title="Online Games on Fgame">
                 <img src="@assets/img/home.png" alt="home" decoding="async" class="nav-img" />
               </a>
+              <a class="sc-jaa1t8-1 bxeyFq" @click="$router.push('/classify')" title="Online Games on Fgame">
+                <img src="@/assets/img/nav.png" alt="home" decoding="async" class="nav-img" />
+              </a>
             </div>
           </nav>
 
@@ -46,18 +49,6 @@
           </span>
         </a>
       </div>
-      <div
-        id="adsgoeshere3"
-        class="guanggao_tempmargin"
-        style="text-align: center; height: auto !important"
-        v-html="adsenseContent"
-      ></div>
-      <div class="game-content native-scroll">
-        <div class="item" @click="tocategory(item)" v-for="(item, index) in catetorys">
-          <img :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
-          <p>{{ item.category }}</p>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -65,8 +56,6 @@
 <script>
 import { getProductQuery, getBaseUrl } from '@api/user'
 import { baseUrl } from '@/config'
-import { mapGetters } from 'vuex'
-
 export default {
   data() {
     return {
@@ -78,7 +67,6 @@ export default {
       productdata: null,
       headerfixed: false,
       sn: '',
-      adsenseContent: '',
       isShow: false,
       images: []
     }
@@ -87,16 +75,12 @@ export default {
   computed: {
     baseUrl() {
       return location.hostname === 'localhost' ? baseUrl : ''
-    },
-    ...mapGetters(['catetorys'])
+    }
   },
   created() {
     this._getProductQuery()
   },
-  mounted() {
-    let _this = this
-    _this.adsenseContent = document.getElementById('divadsensedisplaynone2').innerHTML
-  },
+  mounted() {},
 
   methods: {
     todetail(item) {
@@ -104,15 +88,6 @@ export default {
         path: '/detail',
         query: {
           id: item.id
-        }
-      })
-    },
-    tocategory(item) {
-      this.$router.push({
-        path: '/classifyList',
-        query: {
-          categoryId: item.id,
-          name: item.category
         }
       })
     },

@@ -18,6 +18,10 @@
             <a class="sc-jaa1t8-1 bxeyFq" href="/" title="Online Games on Fgame">
               <img src="@assets/img/home.png" alt="home" decoding="async" class="nav-img" />
             </a>
+
+            <a class="sc-jaa1t8-1 bxeyFq" @click="$router.push('/classify')" title="Online Games on Fgame">
+              <img src="@/assets/img/nav.png" alt="home" decoding="async" class="nav-img" />
+            </a>
           </div>
         </nav>
       </div>
@@ -43,12 +47,7 @@
             </span>
           </a>
         </div>
-        <div class="game-content native-scroll">
-          <div class="item" @click="tocategory(item)" v-for="(item, index) in catetorys">
-            <img :src="baseUrl + item.imgUrl" loading="eager" decoding="async" class="logo" />
-            <p>{{ item.category }}</p>
-          </div>
-        </div>
+
         <div class="bottom-nav">
           <img
             src="@/assets/img/Fgame@2x.png"
@@ -110,7 +109,7 @@ export default {
       this.height = 16
       return this.height
     },
-    ...mapGetters(['games', 'catetorys'])
+    ...mapGetters(['games'])
   },
   beforeRouteLeave(to, from, next) {
     let position = window.scrollY //记录离开页面的位置
@@ -147,15 +146,7 @@ export default {
         }
       })
     },
-    tocategory(item) {
-      this.$router.push({
-        path: '/classifyList',
-        query: {
-          categoryId: item.id,
-          name: item.category
-        }
-      })
-    },
+
     _getProductQuery() {
       let _this = this
       let param = {
